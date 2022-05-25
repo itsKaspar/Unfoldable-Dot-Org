@@ -1,0 +1,162 @@
+
+:root {
+  --p: 20px; /* global padding */
+
+  --c0 : rgba(255,255,255,1);
+  --c1 : rgba(255,255,255,0.8);
+  --c2 : rgba(255,255,255,0.6);
+  --c3 : rgba(255,255,255,0.4);
+
+  --black1 : rgba(0,0,0,1);
+  --black2 : rgba(0,0,0,0.8);
+  --black3 : rgba(0,0,0,0.4);
+  --black4 : rgba(0,0,0,0.2);
+
+  --b : 45vh;
+}
+
+@font-face {
+  font-family: "NunitoSans-Light";
+  src: url("../fonts/NunitoSans-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NunitoSans-Regular";
+  src: url("../fonts/NunitoSans-Regular.ttf") format("truetype");
+}
+/*
+  font-family: "Abington";
+  src: url("../fonts/abington bold font.ttf") format("truetype"),
+       url("../fonts/abington bold font.otf") format("opentype");
+
+  font-family: "SourceCodePro";
+  src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype"); */
+
+  /* font-family: "Qaligo";
+  src: url("../fonts/Qaligo Regular.ttf") format("truetype"),
+       url("../fonts/Qaligo Regular.otf") format("opentype"); */
+
+
+
+body{
+	font-size: 17px;
+
+	width: 100vw;
+	height: 100%;
+	color: var(--c1);
+  padding:0;
+  overflow-x:hidden;
+
+
+  font-family: 'NunitoSans-Light';
+}
+
+strong{
+  font-family: 'NunitoSans-Regular';
+}
+
+/* MAIN GRID */
+
+#home{
+  display: grid;
+  grid-template-columns: var(--b) var(--b);
+  grid-template-rows: var(--b) var(--b);
+  grid-gap: calc(var(--p) * 0);
+  padding: calc(var(--p) * 1);
+
+  padding-top: calc((100vh - (2 * var(--b)))/2);
+  padding-left: calc((100vw - (2 * var(--b)))/2);
+
+}
+
+#home section{
+
+	/* border: 1px dashed var(--c3); */
+	padding: calc(var(--p) * 2);
+	/* vertical-align: middle; */
+
+}
+
+/* #home section:hover{
+	border: 3px dashed var(--c2);
+} */
+
+
+
+#home section iframe{
+  padding:0;
+  width:100%;
+  height:100%;
+}
+
+#p5background{
+	position: absolute;
+	top :0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+/* Generic Styles */
+
+h1{
+  font-family: 'Abington', sans-serif;
+	font-size: 2.6em;
+	color: var(--c0);
+  margin-bottom: var(--p);
+}
+
+h2{
+	font-family: 'Abington', sans-serif;
+	font-size: 1.6em;
+	color: var(--c0);
+  margin-bottom: var(--p);
+}
+
+h3{
+  font-size: 1.2em;
+  color: var(--c0);
+}
+
+
+p{
+	text-align: justify;
+  text-justify: inter-letter;
+}
+
+
+a{
+	color: white;
+}
+
+#home section ul li{
+  margin-bottom: calc(var(--p)/4);
+}
+
+#home section ul li a:hover{
+	border-bottom: 2px solid white;
+}
+
+#home section ul li a:before{
+	content: "»"
+}
+
+#home code{
+  font-size:0.85em;
+}
+
+main{
+	z-index: -1;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+.home-button {
+  font-size:4em;
+  display: none;
+  position: fixed;
+  top: 0;
+  left:calc( (100vw / 2) - ( var(--b) / 1) - (var(--p) * 3));
+  z-index: 1;
+}

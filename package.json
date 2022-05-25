@@ -1,0 +1,12 @@
+{
+  "name": "website2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "server": "python -m http.server",
+    "build": "node scripts/genPaths.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

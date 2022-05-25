@@ -1,0 +1,14 @@
+<i-code layout="visual">
+function setup(){
+  createCanvas(windowWidth,windowHeight);
+  rectMode(CENTER);
+}
+function draw(){
+  clear();
+    circle(width/2,height/2,100)
+    noFill();
+    stroke('orange')
+    strokeWeight(10);
+    rect(width/2, height/2, width, height);
+}
+</i-code>

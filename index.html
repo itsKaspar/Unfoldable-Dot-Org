@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/github-dark-dimmed.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<script src=js/p5background.js></script>
+
+<div id="home">
+
+<section>
+  <h1>Fucking<br> Signal<br> Culture</h1>
+
+  <p>
+    Fucking Signal Culture is a research repository whose publications wish to question
+    digital literacy in a world of ever-mutating online social practices.
+    We believe in an alternative internet culture free from our neoliberal heritage,
+    that machines do not have to carry out the biases of society,
+    and that the cyberspaces in which we evolve together
+    can be made more inclusive, accessible, and ecoresponsible.
+  </p>
+
+</section>
+
+<section>
+  <iframe src="iframes/idx-codepoem.html"></iframe>
+</section>
+
+<section>
+  <iframe src="iframes/idx-sketch.html"></iframe>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <script src="../components/components.js"></script>
+  <blog-menu></blog-menu>
+
+  <script>
+  main();
+
+  async function main(){
+
+    let response = await fetch('../paths.json');
+    let a = await response.json();
+    let b = JSON.stringify(a)
+    let blogMenuDiv = document.querySelector('blog-menu')
+
+    blogMenuDiv.setAttribute('items', b);
+  }
+
+  // module as its own github project
+  // import it : minified version and then
+  // iframes
+
+  // or the way handled the netitor
+  // simple html page containing the minified version
+  // that can be iframed
+
+  // hash code decode using pako
+
+  </script>
+</section>
+
+</div>
+
+</body>
+</html>

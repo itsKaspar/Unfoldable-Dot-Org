@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/blog.css">
+
+  <!-- highlighting -->
+  <link rel="stylesheet" href="css/code.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+
+  <!-- libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script src="../components/components.js"></script>
+</head>
+
+<body>
+
+<script src=js/p5background.js></script>
+<script>
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 100) {
+    $('.home-button').fadeIn();
+  } else {
+    $('.home-button').fadeOut();
+  }
+});
+</script>
+
+<div class="home-button"><a href="/">⌂</a></div>
+
+  <div id="blog">
+    <div id="blog-head">
+      <div id="nav"><a href="/">⌂ root</a> > <span id="blog-filename"></span></div>
+      <h1 id="blog-title"></h1>
+    </div>
+    <div id="blog-body"></div>
+
+<script>
+
+  // Get the GET Variable in javascript
+  const queryString = window.location.search;
+  // console.log(queryString);
+  // #### returns '?product=shirt&color=blue&newuser&size=m'
+  const urlParams = new URLSearchParams(queryString);
+  const path = urlParams.get('path')
+
+  // # READ BLOG POST FROM FILE
+
+  readBlogPost();
+
+  async function readBlogPost(){
+
+    // Get Blog Content
+    let response = await fetch(path);
+    let text = await response.text();
+
+    // Get Blog Title
+    let filename = path.replace(/^.*[\\\/]/, '') // get the filename
+
+    // Get DOM elements
+    let blogHead = document.querySelector('#blog-head')
+    let blogTitle = document.querySelector('#blog-title')
+    let blogBody = document.querySelector('#blog-body')
+    let blogFilename = document.querySelector('#blog-filename')
+
+    // Update DOM elements
+    blogFilename.innerHTML = filename;
+    blogTitle.innerHTML = filename.slice(0, -3);
+    blogBody.innerHTML = marked.parse(text);
+
+    hljs.highlightAll(); // can also use the add function to hilight code blocks instead in the marked options ?
+  }
+
+  </script>
+
+  </div>
+
+
+
+</body>
+</html>

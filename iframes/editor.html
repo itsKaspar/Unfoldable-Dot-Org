@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/mode/javascript/javascript.min.js"></script>
+    <script>
+
+      // # Get URL Params
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const hashCode = urlParams.get('code');
+      const layout = urlParams.get('layout');
+
+      // # Get hashCode or defaultCode
+
+      let defaultCode;
+      if(!hashCode){ defaultCode =   `let a = 1;`; }
+      else{ defaultCode = atob(hashCode); }
+
+      // # Create Basic HTML for Visual
+
+      function createIframe(code){
+
+        let iframe = document.createElement('iframe');
+        iframe.setAttribute("id", "p5") // set its id to p5
+        iframe.setAttribute("scrolling", "no");
+        document.body.appendChild(iframe);
+        let html =  `<!DOCTYPE html>
+                <html>
+                  <head>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"><\/script>
+                    <style>*{margin:0;padding:0;border:0;box-sizing: border-box;overflow:hidden;}</style>
+                  </head>
+                  <body>
+                    <script>
+                      ${code}
+                      function windowResized(){resizeCanvas(windowWidth, windowHeight);}
+                    <\/script>
+                  </body>
+                </html>`;
+
+        iframe = iframe.contentWindow || iframe.contentDocument.document || iframe.contentDocument;
+        iframe.document.open();
+        iframe.document.write(html);
+        iframe.document.close();
+      }
+
+      // ADD EDITOR AND HANDLE UPDATES
+
+      let delay;
+      window.addEventListener('load', function() {
+          window.myCodeMirror = CodeMirror.fromTextArea(document.getElementById("editor"), {
+              lineNumbers: true,
+              mode: 'javascript',
+          });
+          window.myCodeMirror.on('change', editor => {
+            clearTimeout(delay);
+            delay = setTimeout(updatePreview, 300);
+          });
+      });
+
+      function updatePreview(){
+        let sketch = document.querySelector("#p5");
+        if(sketch) { sketch.remove(); } // # Delete old iframe
+        let code = window.myCodeMirror.getValue(); // # Get changes
+        createIframe(code); // # Create New Iframe
+      }
+    </script>
+
+    <style id="pageStyle">
+      *{border:0;margin:0;padding:0;box-sizing: border-box;}
+      .CodeMirror{background-color: #ffffff0d;}
+      .CodeMirror-gutters{background-color: #ffffff00;border:0;border-right:1px dashed #ffffff66;}
+      html, body{
+        height:100%;
+      }
+      #p5{
+        border:0;
+      }
+      .CodeMirror, #p5{
+        position:absolute;
+      }
+    </style>
+</head>
+
+<body>
+
+  <textarea id="editor"></textarea>
+
+  <script>
+      let box = document.querySelector("#editor"); // Write Start Code in Editor
+      box.innerHTML = defaultCode;
+
+      createIframe(defaultCode); // Write Iframe
+
+      // # Define different style
+      let cssSide = `
+      .CodeMirror, #p5{ height:100%;width:50%; }
+      #p5{ left:50%;top:0; }`;
+      let cssTop = `
+      .CodeMirror, #p5{width:100%;height:50%;}
+      #p5{top:50%;border:0;}`;
+      let cssBot = `
+      .CodeMirror, #p5{width:100%;height:50%;}
+      #p5{border:0;}
+      .CodeMirror{top:50%;}`;
+      let cssCode = `
+      .CodeMirror, #p5{width:100%;height:100%;}
+      #p5 {display:none;}`;
+      let cssVisual = `
+      .CodeMirror, #p5{width:100%;height:100%;}
+      .CodeMirror {display:none;}`;
+      let cssOverlay = `
+      .CodeMirror, #p5{width:100%;height:100%;top0;left:0}`;
+
+      const pageStyle = document.querySelector("#pageStyle");
+      switch(layout){
+        case "over":   pageStyle.innerHTML += cssTop; break;
+        case "under":  pageStyle.innerHTML += cssBot; break;
+        case "side":   pageStyle.innerHTML += cssSide; break;
+        case "code":   pageStyle.innerHTML += cssCode; break;
+        case "visual": pageStyle.innerHTML += cssVisual; break;
+        case "overlay":pageStyle.innerHTML += cssOverlay; break;
+        default :      pageStyle.innerHTML += cssSide; break;
+      }
+  </script>
+
+</body>
+</html>

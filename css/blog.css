@@ -1,0 +1,130 @@
+/* BLOG POST */
+
+#blog{
+  padding-top: calc(var(--p)*2);
+  margin-left:auto;
+  margin-right:auto;
+  width:90vh;                                              /*cant have this for phones */
+  line-height: 1.1;
+  /* border:1px solid white; */
+}
+
+#blog-head{
+  padding-left: var(--p);
+  margin-bottom: var(--p);
+  /* border:1px solid white; */
+}
+
+#blog #nav{
+  padding-left: var(--p);
+  margin-bottom: var(--p);
+  /* border:1px solid white; */
+}
+
+#blog h1{
+  margin:0;
+  padding:0;
+  padding-left: var(--p);
+  /* border:1px solid white; */
+}
+
+#blog-body{
+  width:100%;
+  border-left:1px solid white;
+  padding: var(--p);
+}
+
+#blog p, #blog h2, #blog h3, #blog h4, #blog h5, #blog h6, #blog iframe{
+  padding-left: var(--p);
+  padding-right: var(--p);
+  padding-bottom: var(--p);
+}
+
+#blog iframe{
+  margin-left:var(--p);
+  padding:0;
+  width: calc(100% - (var(--p) * 2));
+  height:50vh;
+}
+
+#blog pre{
+  line-height: 1.3;
+  font-size:0.85em;
+  padding: calc(var(--p) / 1.5);
+  margin-bottom: var(--p);
+  margin-left:var(--p);
+  margin-right:var(--p);
+}
+
+/* # Ordered Lists */
+
+#blog ol {
+  list-style-type: decimal;
+  padding-left: calc(var(--p)*2);
+  padding-bottom: var(--p);
+}
+
+#blog ol li ol{
+  list-style-type: lower-alpha;
+  padding-bottom: 0;
+}
+
+/* # Unordered Lists */
+
+#blog ul{
+  list-style-type: none;
+  padding-left: calc(var(--p)*2);
+  padding-bottom: var(--p);
+}
+
+#blog ol li, #blog ul li{
+    padding:2px;
+}
+
+
+/* # Tables */
+
+#blog table{
+  /* border: 1px solid white; */
+  margin-bottom: var(--p);
+  /* width:calc(100% - ( var(--p) * 2)); */
+  margin-left:auto;
+  margin-right:auto;
+  font-size:0.9em;
+}
+
+#blog table thead{
+
+}
+
+#blog table thead tr{
+
+}
+
+#blog table thead tr th{
+  padding-left:calc(var(--p));
+  padding-right:calc(var(--p));
+  padding-top:calc(var(--p)/3);
+  padding-bottom:calc(var(--p)/3);
+}
+
+#blog table tbody{
+  border-top: 1px solid #ffffff22;
+}
+
+#blog table tbody tr{
+
+}
+
+#blog table  tbody tr:nth-child(even){
+
+  background-color: #ffffff22;
+}
+
+#blog table tbody tr td{
+  padding-left:calc(var(--p));
+  padding-right:calc(var(--p));
+  padding-top:calc(var(--p)/3);
+  padding-bottom:calc(var(--p)/3);
+  text-align:center;
+}
