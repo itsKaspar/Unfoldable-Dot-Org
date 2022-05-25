@@ -41,19 +41,19 @@
 
 <section>
   <h2>Publications</h2>
-  <script src="../components/components.js"></script>
+  <script src="components/components.js"></script>
 
   <blog-menu></blog-menu>
 
   <script>
   main();
 
-  console.log(window.location.hostname)
+  console.log(window.location.origin)
 
 
   async function main(){
 
-    let response = await fetch(window.location.hostname + '/paths.json');
+    let response = await fetch(window.location.origin + '/paths.json');
     let a = await response.json();
     let b = JSON.stringify(a)
     let blogMenuDiv = document.querySelector('blog-menu')
