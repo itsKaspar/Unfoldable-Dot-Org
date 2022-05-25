@@ -32,13 +32,20 @@ $(document).scroll(function() {
     $('.home-button').fadeOut();
   }
 });
+
+// set link to home
+let home1 = document.getElementById('homeLinkBig')
+let home2 = document.getElementById('homeLinkBig')
+home1.href = window.location.origin + '' + window.location.pathname;
+home2.href = window.location.origin + '' + window.location.pathname;
+
 </script>
 
-<div class="home-button"><a href="#">⌂</a></div>
+<div class="home-button"><a href="#" id="homeLinkBig">⌂</a></div>
 
   <div id="blog">
     <div id="blog-head">
-      <div id="nav"><a href="#">⌂ root</a> > <span id="blog-filename"></span></div>
+      <div id="nav"><a href="#" id="homeLinkSmall">⌂ root</a> > <span id="blog-filename"></span></div>
       <h1 id="blog-title"></h1>
     </div>
     <div id="blog-body"></div>
