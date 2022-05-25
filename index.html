@@ -48,12 +48,13 @@
   <script>
   main();
 
-  console.log(window.location.origin)
-
+  console.log(window.location.origin);
+  console.log(window.location.pathname);
+  let PATH = window.location.origin + '' + window.location.pathname
 
   async function main(){
 
-    let response = await fetch(window.location.origin + '/paths.json');
+    let response = await fetch(PATH + '/paths.json');
     let a = await response.json();
     let b = JSON.stringify(a)
     let blogMenuDiv = document.querySelector('blog-menu')
