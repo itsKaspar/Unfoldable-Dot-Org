@@ -33,12 +33,6 @@ $(document).scroll(function() {
   }
 });
 
-// set link to home
-let home1 = document.getElementById('homeLinkBig')
-let home2 = document.getElementById('homeLinkBig')
-home1.href = window.location.origin + '' + window.location.pathname;
-home2.href = window.location.origin + '' + window.location.pathname;
-
 </script>
 
 <div class="home-button"><a href="#" id="homeLinkBig">⌂</a></div>
@@ -51,6 +45,13 @@ home2.href = window.location.origin + '' + window.location.pathname;
     <div id="blog-body"></div>
 
 <script>
+
+// set link to home
+let home1 = document.getElementById('homeLinkSmall')
+let home2 = document.getElementById('homeLinkBig')
+home1.href = window.location.origin;
+home2.href = window.location.origin;
+console.log(home1.href);
 
   // Get the GET Variable in javascript
   const queryString = window.location.search;
