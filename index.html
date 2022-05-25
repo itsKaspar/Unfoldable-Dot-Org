@@ -6,7 +6,6 @@
   <title>Title</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/github-dark-dimmed.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -49,9 +48,12 @@
   <script>
   main();
 
+  console.log(window.location.hostname)
+
+
   async function main(){
 
-    let response = await fetch('paths.json');
+    let response = await fetch(window.location.pathname + '/paths.json');
     let a = await response.json();
     let b = JSON.stringify(a)
     let blogMenuDiv = document.querySelector('blog-menu')
