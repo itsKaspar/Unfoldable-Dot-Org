@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-// Recursively check blog folders
+// Recursively check blog folderss
 
 function getAllPosts(dirPath, arrayOfFiles) {
   
