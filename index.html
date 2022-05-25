@@ -43,6 +43,7 @@
 <section>
   <h2>Publications</h2>
   <script src="../components/components.js"></script>
+
   <blog-menu></blog-menu>
 
   <script>
@@ -50,7 +51,7 @@
 
   async function main(){
 
-    let response = await fetch('../paths.json');
+    let response = await fetch('paths.json');
     let a = await response.json();
     let b = JSON.stringify(a)
     let blogMenuDiv = document.querySelector('blog-menu')
