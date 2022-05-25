@@ -53,7 +53,7 @@
 
   async function main(){
 
-    let response = await fetch(window.location.pathname + '/paths.json');
+    let response = await fetch(window.location.hostname + '/paths.json');
     let a = await response.json();
     let b = JSON.stringify(a)
     let blogMenuDiv = document.querySelector('blog-menu')
