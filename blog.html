@@ -46,11 +46,11 @@ $(document).scroll(function() {
 
 <script>
 
-// set link to home
-let home1 = document.getElementById('homeLinkSmall')
-let home2 = document.getElementById('homeLinkBig')
-home1.href = window.location.origin;// + '/website';
-home2.href = window.location.origin;// + '/website';
+  // set link to home
+  let home1 = document.getElementById('homeLinkSmall')
+  let home2 = document.getElementById('homeLinkBig')
+  home1.href = window.location.href.split('blog.html')[0];// + '/website';
+  home2.href = window.location.href.split('blog.html')[0];// + '/website';
 
   // Get the GET Variable in javascript
   const queryString = window.location.search;
