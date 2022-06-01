@@ -2,76 +2,73 @@
 <html>
 
 <head>
+  <!-- meta -->
   <meta charset="utf-8">
   <title>Signal Ethics</title>
+
+  <!-- cascading stylesheets -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
 
+  <!-- javascript libraries -->
   <script src="./lib/p5.min.js"></script>
   <script src="./lib/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
-<script src=js/p5background.js></script>
+  <script src=js/p5background.js></script> <!-- background sketch -->
 
-<div id="home">
+  <div id="home">
 
-<section>
-  <h1>Signal Ethics</h1>
+    <section>
 
-  <p>
-    Signal Ethics is a research repository whose publications wish to question
-    digital literacy in a world of ever-mutating online social practices.
-    We believe in an alternative internet culture free from our neoliberal heritage,
-    that machines do not have to carry out the biases of society,
-    and that the cyberspaces in which we evolve together
-    can be made more inclusive, accessible, and ecoresponsible.
-  </p>
+      <h1>Signal Ethics</h1>
 
-</section>
+      <p>
+        Signal Ethics is a research repository whose publications wish to question
+        digital literacy in a world of ever-mutating online social practices.
+        We believe in an alternative internet culture free from our neoliberal heritage,
+        that machines do not have to carry out the biases of society,
+        and that the cyberspaces in which we evolve together
+        can be made more inclusive, accessible, and ecoresponsible.
+      </p>
 
-<section>
-  <iframe src="iframes/idx-codepoem.html"></iframe>
-</section>
+    </section>
 
-<section>
-  <iframe src="iframes/idx-sketch.html"></iframe>
-</section>
+    <section>
+      <iframe src="iframes/idx-codepoem.html"></iframe>
+    </section>
 
-<section>
-  <h2>Publications</h2>
-  <script src="components/components.js"></script>
+    <section>
+      <iframe src="iframes/idx-sketch.html"></iframe>
+    </section>
 
-  <blog-menu></blog-menu>
+    <section>
 
-  <script>
-  main();
+      <h2>Publications</h2>
+      
+      <script src="components/components.js"></script>
 
-  console.log(window.location.origin + '' + window.location.pathname);
+      <blog-menu></blog-menu>
 
-  async function main(){
+      <script>
+      main();
 
-    let response = await fetch(window.location.origin + '' + window.location.pathname + '/paths.json');
-    let a = await response.json();
-    let b = JSON.stringify(a)
-    let blogMenuDiv = document.querySelector('blog-menu')
+      console.log(window.location.origin + '' + window.location.pathname);
 
-    blogMenuDiv.setAttribute('items', b);
-  }
+      async function main(){
 
-  // module as its own github project
-  // import it : minified version and then
-  // iframes
+        let response = await fetch(window.location.origin + '' + window.location.pathname + '/paths.json');
+        let a = await response.json();
+        let b = JSON.stringify(a)
+        let blogMenuDiv = document.querySelector('blog-menu')
 
-  // or the way handled the netitor
-  // simple html page containing the minified version
-  // that can be iframed
+        blogMenuDiv.setAttribute('items', b);
+      }
 
-  // hash code decode using pako
-
-  </script>
-</section>
+      </script>
+    </section>
 
 </div>
 
