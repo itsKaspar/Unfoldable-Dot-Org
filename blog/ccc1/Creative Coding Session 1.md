@@ -70,7 +70,7 @@ Here are some common questions that you could ask yourself :
 4. How many of these are fixed ? How many are moving ?
 
 
-<i-code layout="visual">
+<tiny-code layout="visual">
 function setup() {
 createCanvas(windowWidth, windowHeight);
 }
@@ -100,4 +100,4 @@ function draw() {
   // fill(mouseX);
   triangle(v4.x, v4.y, v1.x, v1.y, mouseX, mouseY);
 }
-</i-code>
+</tiny-code>

@@ -10,7 +10,7 @@ the [random() function documentation](https://p5js.org/reference/#/p5/random) on
 - using the random() function
 - making a randomly placed circle at every frame
 
-<i-code layout="overlay">
+<tiny-code layout="overlay">
 let v;
 
 function setup() {
@@ -26,14 +26,14 @@ function draw(){
   circle(v.x,v.y,diameter)
 }
 
-</i-code>
+</tiny-code>
 
 ## For loops
 
 Having realized some of the possibilities that the draw() loop offers, it's natural to ask yourself if we could create our own loops.
 Let's say we wanted to draw 5 randomly placed circles every second but have to create variables for each of these circle every time
 
-<i-code layout="overlay">
+<tiny-code layout="overlay">
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(1);
@@ -55,12 +55,12 @@ function draw(){
     circle(v5.x,v5.y,10); // draw circle 5
 }
 
-</i-code>
+</tiny-code>
 
 This code would be rather tedious and have a lot of repetition. Whereas by creating our own for loop inside the draw loop
 
 
-<i-code layout="overlay">
+<tiny-code layout="overlay">
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(1);
@@ -83,7 +83,7 @@ function drawRandomCircle(){
   circle(v.x,v.y,10); // draw circle
 }
 
-</i-code>
+</tiny-code>
 
 The magic happens on the line ***for(let i = 0; i < 5; i++)***
 Let's deconstruct this to understand how the for loop definition works

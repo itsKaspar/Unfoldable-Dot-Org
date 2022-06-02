@@ -1,4 +1,4 @@
-<i-code layout="visual">
+<tiny-code layout="visual">
 function setup(){
   createCanvas(windowWidth,windowHeight);
   rectMode(CENTER);
@@ -11,4 +11,4 @@ function draw(){
     strokeWeight(10);
     rect(width/2, height/2, width, height);
 }
-</i-code>
+</tiny-code>
