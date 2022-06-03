@@ -13,7 +13,7 @@ A simple random walker algorithm can be written as
     2. add a random value to the walker x position
     3. add a random value to the walker y position
 
-```js
+<tiny-code>
 let x, y;
 
 function setup() {
@@ -28,9 +28,8 @@ function draw(){
   y += random(-10,10);
 }
 
-```
+</tiny-code>
 
-<iframe src="blog/ccc3/code1.html"></iframe>
 
 Let's say we'd like to have a hundred random walkers, except we don't want to create 100 vectors.
 And since the data needs to be persistent we can't just use a for loop, to solve this we are going to need a persistent data structure
@@ -42,7 +41,7 @@ An efficient data structure to use for this is an array, in common terms an arra
 
 First let's create an array of 100 walkers and display them
 
-```js
+<tiny-code>
 let walkers = []; // initiate the walkers array
 
 function setup() {
@@ -67,7 +66,7 @@ function drawWalkers(){
   }
 }
 
-```
+</tiny-code>
 
 Now all we need to do is add an moveWalkers() function and add it in the draw loop calls
 
@@ -79,8 +78,6 @@ function moveWalkers() {
   }
 }
 ```
-
-<iframe src="blog/ccc3/code2.html"></iframe>
 
 ### Ideas to make the code better
 
