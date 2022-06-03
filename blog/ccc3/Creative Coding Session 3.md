@@ -14,18 +14,19 @@ A simple random walker algorithm can be written as
     3. add a random value to the walker y position
 
 <tiny-code>
-let x, y;
+let v;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  x = width/2;
-  y = height/2;
+  v = createVector(width/2, height/2);
+  noStroke();
 }
 
 function draw(){
-  circle(x,y,10)
-  x += random(-10,10);
-  y += random(-10,10);
+  clear();
+  circle(v.x,v.y,10)
+  v.x += random(-1,1);
+  v.y += random(-1,1);
 }
 
 </tiny-code>
@@ -47,10 +48,13 @@ let walkers = []; // initiate the walkers array
 function setup() {
   createCanvas(windowWidth, windowHeight);
   initWalkers();
+  noStroke();
 }
 
 function draw(){
+  clear();
   drawWalkers();
+  //moveWalkers();
 }
 
 function initWalkers(){
@@ -66,23 +70,59 @@ function drawWalkers(){
   }
 }
 
-</tiny-code>
-
-Now all we need to do is add an moveWalkers() function and add it in the draw loop calls
-
-```js
 function moveWalkers() {
   for(let i = 0; i < 100; i++){ // loop to display the 100 walkers
     walkers[i].x += random(-2,2); // update walkers[i] x position
     walkers[i].y += random(-2,2); // update walkers[i] y position
   }
 }
-```
 
-### Ideas to make the code better
+</tiny-code>
+
+
+
+
+
+
+### Conditions
 
 We need to somehow check if the random walker is going out of the frame and either :
 - put them back in the center of the sketch if he goes out of the frame
+
+For this we are going to use the if condition. Here is a simple example :
+
+<tiny-code layout="over">
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noStroke();
+}
+
+function draw(){
+  clear();
+  if(mouseX < width/2){
+    fill('red');
+  }
+  else{
+    fill('blue');
+  }
+  circle(mouseX, mouseY, 100);
+}
+
+</tiny-code>
+
+Except we are going to use some conditions that are a little bit more advanced
+
+<tiny-code layout="code">
+function constrain(){
+
+}
+</tiny-code>
+
+<tiny-code layout="code">
+function snake2(){
+
+}
+</tiny-code>
 
 ### Conditions and Statements
 
