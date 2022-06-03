@@ -52,7 +52,7 @@ tiny-code{
   margin-left:var(--p);
   padding:0;
   width: calc(100% - (var(--p) * 2));
-  min-height:50vh;
+  /* min-height:50vh; */
 }
 
 #blog pre{
