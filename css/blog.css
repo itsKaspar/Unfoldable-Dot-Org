@@ -14,8 +14,8 @@ tiny-code{
   width:120%;
   display:block;
   margin-left:-10%;
-  border:1px solid white;
-  height:600px;
+  /* border:1px solid white; */
+  height:500px;
 }
 
 #blog-head{
@@ -54,6 +54,7 @@ tiny-code{
   padding:0;
   width: calc(100% - (var(--p) * 2));
   /* min-height:50vh; */
+  height:100%;
 }
 
 #blog pre{
