@@ -9,6 +9,13 @@
   /* border:1px solid white; */
 }
 
+tiny-code{
+  /* background-color:red; */
+  width:120%;
+  display:block;
+  margin-left:-10%;
+}
+
 #blog-head{
   padding-left: var(--p);
   margin-bottom: var(--p);
@@ -44,7 +51,7 @@
   margin-left:var(--p);
   padding:0;
   width: calc(100% - (var(--p) * 2));
-  height:50vh;
+  min-height:50vh;
 }
 
 #blog pre{

@@ -54,26 +54,34 @@ function setup() {
 function draw(){
   clear();
   drawWalkers();
-  //moveWalkers();
+  moveWalkers();
 }
 
 function initWalkers(){
-  for(let i = 0; i < 100; i++){ // loop to create 100 walkers
-    let w = createVector(random(width), random(height)); // create a random vector
-    walkers.push(w) // add the walker to the walkers array
+  // loop to create 100 walkers
+  for(let i = 0; i < 100; i++){
+    // create a random vector
+    let w = createVector(random(width), random(height));
+    // add the walker to the walkers array
+    walkers.push(w)
   }
 }
 
 function drawWalkers(){
-  for(let i = 0; i < 100; i++){ // loop to display the 100 walkers
-    circle(walkers[i].x, walkers[i].y, 10); // display walker at index i
+  // loop to display the 100 walkers
+  for(let i = 0; i < 100; i++){
+    // display walker at index i
+    circle(walkers[i].x, walkers[i].y, 10);
   }
 }
 
 function moveWalkers() {
-  for(let i = 0; i < 100; i++){ // loop to display the 100 walkers
-    walkers[i].x += random(-2,2); // update walkers[i] x position
-    walkers[i].y += random(-2,2); // update walkers[i] y position
+  // loop to move the 100 walkers
+  for(let i = 0; i < 100; i++){
+    // update walkers[i] x position
+    walkers[i].x += random(-2,2);
+    // update walkers[i] y position
+    walkers[i].y += random(-2,2);
   }
 }
 
@@ -91,7 +99,7 @@ We need to somehow check if the random walker is going out of the frame and eith
 
 For this we are going to use the if condition. Here is a simple example :
 
-<tiny-code layout="over">
+<tiny-code>
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
@@ -112,16 +120,25 @@ function draw(){
 
 Except we are going to use some conditions that are a little bit more advanced
 
-<tiny-code layout="code">
+<tiny-code>
+function reset(){
+
+}
+
+</tiny-code>
+
+<tiny-code>
 function constrain(){
 
 }
+
 </tiny-code>
 
-<tiny-code layout="code">
+<tiny-code>
 function snake2(){
 
 }
+
 </tiny-code>
 
 ### Conditions and Statements
@@ -157,22 +174,3 @@ Create a random path by adding a new line connected to the old one at every draw
 - update the current position to the next position
 - update the next position (add random x and random y to itself)
 - repeat last three steps
-
-
-```js
-// # ssc.org v.0.0.1b
-// # copy <it> right  !
-// # <3
-
-let sentimental;
-let signal;
-let culture;
-
-function stateMachines() {
-  while(undefined == null){
-    ...
-    // the art happens here
-    ...
-  }
-}
-```
