@@ -40,6 +40,51 @@ that will can contain all the random walkers
 
 An efficient data structure to use for this is an array, in common terms an array is exactly like an indexed table
 
+Here is an example of an array for salad ingredient
+
+```js
+let salad = ["tomato", "cucumber", "mozzarella"];
+```
+
+This creates the following array inside the computer memory :
+
+| index i | value at salad[i] |                                                          
+|---------|:-------------------------|
+| 0 | tomato |
+| 1 | cucumber |
+| 2 | mozzarella |
+
+to access these values I can use the array syntax
+
+```js
+console.log(salad[0]) // prints "tomato"
+console.log(salad[1]) // prints "cucumber"
+console.log(salad[2]) // prints "mozzarella"
+```
+
+I could also initiate the array to be empty, and push the elements inside it, one by one
+
+```js
+let salad = [] // creates an empty array
+salad.push("tomato"); // add tomato at index 0
+salad.push("cucumber"); // add cucumber at index 1
+salad.push("mozzarella"); // add mozzarella at index 2
+```
+
+Adding the elements in one by one can be practical when adding elements programmatically (not typing them all by hand). This is typically done using for loops, where at every loop you will push a new element.
+
+
+Imagine we had a function called randomIngredient() that returns a random ingredient, we could then compose random salads
+
+```js
+let salad = [];
+for(let i = 0 ; i < 20 ; i++){ // loop 20 times
+    salad.push(randomIngredient()); // add a random ingredient
+}
+```
+
+Now if we go back to our original project, which is to create one hundred random walkers
+
 First let's create an array of 100 walkers and display them
 
 <tiny-code>
@@ -54,7 +99,6 @@ function setup() {
 function draw(){
   clear();
   drawWalkers();
-  moveWalkers();
 }
 
 function initWalkers(){
@@ -75,20 +119,19 @@ function drawWalkers(){
   }
 }
 
-function moveWalkers() {
-  // loop to move the 100 walkers
-  for(let i = 0; i < 100; i++){
-    // update walkers[i] x position
-    walkers[i].x += random(-2,2);
-    // update walkers[i] y position
-    walkers[i].y += random(-2,2);
-  }
-}
-
 </tiny-code>
 
+Now if we want to move these walkers around, all we have to do is add a function that loops over all walkers
+and add to their x and y values
 
-
+```js
+function moveWalkers() {
+  for(let i = 0; i < 100; i++){ // loop 100 times
+    walkers[i].x += random(-2,2);    // update walkers[i] x position
+    walkers[i].y += random(-2,2);    // update walkers[i] y position
+  }
+}
+```
 
 
 
