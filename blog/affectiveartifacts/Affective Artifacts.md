@@ -1,21 +1,48 @@
-## Current Framework
+# Affective Artifacts
 
-<iframe src="blog/affectiveartifacts/code4.html"></iframe>
-
-testttsssssssss
+### L'appareil de reproduction
 
 
-## test 1 : instance mode
 
-<iframe src="blog/affectiveartifacts/code1.html"></iframe>
 
-## test 2 : zoom and translate
+### Tropes and Haunting 
 
-<iframe src="blog/affectiveartifacts/code2.html"></iframe>
+## Filters
 
-## test 3 : graphics buffers
+### Rose Tinted Glasses
 
-<iframe src="blog/affectiveartifacts/code3.html"></iframe>
+En 1955 sur le plateau television CBS de "What's My Line", un jeu on l'on doit deviner le metier des invités, apparait Sam Nadler de la National Farm Equipment Company de Brooklyn. Après que les contendants aient échoués a deviner son metier, il est revelé que Sam est entrepreneur et vend chaque année 2-3 million de paires de lunettes pour poulet.
+
+Un produit qui patenté en 1902, n'a pas vocation a corriger la vue des volailles, mais plutot grace a leur verre colorés en rose, reduire la palette de couleur vue par les poulets, les empechant de differencier la couleur du sang de la couleur des graines.
+
+Au début d'un ou les methodes d'elevage intensifs commencent a se diffuser partout dans le monde, on découvre aussi les
+les conséquences du stress physiologique porté sur les oiseaux, et entre autres une liste de comportement jugés abnormaux, parmi eux : Feather and toe pecking, Cannibalism, Stereotypy, Vent pecking
+Une volaille stressée qui s'entretue, et par conséquence réduit le rendement des elevage intensif
+
+L'entreprise etant en plein essor, on ne se pose pas les question du bien etre de l'oiseau, mais plutot comment controler, affecter/changer/reduire son comportement violent. A cela la solution de visser dans le septum des lunettes a verre colorés semble la meilleure
+
+Moins directement sous le voile,, controle de population, mais vendu en tant que traitement
+on retrouve les meme principes
+
+http://quackcogitations.blogspot.com/2010/01/anything-but-rose-colored-glasses.html
+
+Puis il y a la legende urbaine qui dit que pendant la civil war, on donnait au soldats depressif des lunettes de couleur roses. Que la legende soit vrai non, (Edith piaf qui fait resonner le coeur des soldats)
+
+Quand en 1947 Edith Piaf chante la vie en rose et devient connue a l'inter
+Ces paroles qui parle de trouver amour, et resonne dans le coeur de ce qui sortent d'une periode de guerre
+
+Aujourd'hui en anglais, les rose-tinted glasses sont une expression idiomatique qui décris un biais cognitif : celui de se souvenir du passé d'un meilleur oeil
+
+### Psychological Chunking and Data Storage
+
+### Instagram Filters and Sunsets
+
+### Filters of Affective Artifacts
+
+Appliquer la couleur Sepia, ou le noir et blanc sur une photgraphie, comme sur le son d'une voix chantée, donner un effet telephone en appliquant un filtre qui reduit la plage de fréquence
+C'est un shorthand c'est une filtre qui reproduit algorithmiquement l'artefact affectif d'une medium autre dans un media qui ne l'integre pas par nature.
+
+
 
 
 ### Beyond Representation
@@ -78,3 +105,22 @@ In french the word "meaning" is translated as "sens" which is a synonym to "dire
 Hence why we naturally draw a clear difference between :
 1. [FR] l'absence du sens = [EN] the absence of meaning // the absence of direction
 2. [FR] le non-sens = [EN] the nonsense, the anti-direction (but not the opposite direction as that is contre-sens in french)
+
+
+
+<iframe src="blog/affectiveartifacts/code4.html"></iframe>
+
+testttsssssssss
+
+
+## test 1 : instance mode
+
+<iframe src="blog/affectiveartifacts/code1.html"></iframe>
+
+## test 2 : zoom and translate
+
+<iframe src="blog/affectiveartifacts/code2.html"></iframe>
+
+## test 3 : graphics buffers
+
+<iframe src="blog/affectiveartifacts/code3.html"></iframe>
