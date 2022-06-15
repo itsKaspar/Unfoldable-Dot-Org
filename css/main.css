@@ -28,6 +28,10 @@
   src: url("../fonts/abington bold font.ttf") format("truetype"),
        url("../fonts/abington bold font.otf") format("opentype");
 }
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
+}
 /*
   font-family: "SourceCodePro";
   src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype"); */
@@ -115,7 +119,8 @@ h2{
 }
 
 h3{
-  font-size: 1.2em;
+  font-family: "SourceCodePro", sans-serif;
+  font-size: 1.1em;
   color: var(--c0);
 }
 

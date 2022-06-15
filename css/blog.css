@@ -1,5 +1,22 @@
 /* BLOG POST */
 
+h1,h2,h3,h4,h5,h6{
+    color:  #4d4d4d  ;
+}
+
+p{
+   color:#2b2b2b;
+}
+
+a{
+  color:  #af99cf   ;
+}
+
+a:hover{
+  color:#ffd295
+
+}
+
 #blog{
   padding-top: calc(var(--p)*2);
   margin-left:auto;
@@ -27,6 +44,7 @@ tiny-code{
 #blog #nav{
   padding-left: var(--p);
   margin-bottom: var(--p);
+  color:  #af99cf  ;
   /* border:1px solid white; */
 }
 
@@ -39,7 +57,7 @@ tiny-code{
 
 #blog-body{
   width:100%;
-  border-left:1px solid white;
+  border-left:1px dashed  #979797 ;
   padding: var(--p);
 }
 

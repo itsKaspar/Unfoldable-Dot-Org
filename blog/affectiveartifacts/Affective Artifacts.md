@@ -1,13 +1,8 @@
-# Affective Artifacts
+<h3>L'appareil de reproduction</h3>
 
-### L'appareil de reproduction
+<h3>Tropes and Hauntology</h3>
 
-
-
-
-### Tropes and Haunting 
-
-## Filters
+### filters
 
 ### Rose Tinted Glasses
 
@@ -105,22 +100,3 @@ In french the word "meaning" is translated as "sens" which is a synonym to "dire
 Hence why we naturally draw a clear difference between :
 1. [FR] l'absence du sens = [EN] the absence of meaning // the absence of direction
 2. [FR] le non-sens = [EN] the nonsense, the anti-direction (but not the opposite direction as that is contre-sens in french)
-
-
-
-<iframe src="blog/affectiveartifacts/code4.html"></iframe>
-
-testttsssssssss
-
-
-## test 1 : instance mode
-
-<iframe src="blog/affectiveartifacts/code1.html"></iframe>
-
-## test 2 : zoom and translate
-
-<iframe src="blog/affectiveartifacts/code2.html"></iframe>
-
-## test 3 : graphics buffers
-
-<iframe src="blog/affectiveartifacts/code3.html"></iframe>
