@@ -1,3 +1,45 @@
+<h3>Drawing Shapes</h3>
+
+<p>To draw shapes inside a sketch, you can can call shape functions such as circle(), rect() and triangle().</p>
+
+<tiny-code style="height:210px">function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw(){
+  let x = 0;
+  let y = 0;
+  let diameter = 100;
+  circle(x,y,diameter);
+  noLoop();
+}</tiny-code>
+
+<p>You can place shapes absolutely by giving them an exact x and y coordinate,
+but you can also place them relatively to the sketch's width and height global variables. This can be practical
+to center shapes even if you decide to resize your sketch in the future</p>
+
+<tiny-code style="height:210px">function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw(){
+  circle(width*0.5,height*0.5,100);
+  noLoop();
+}</tiny-code>
+
+<p>Some other intersting global variable are the ones that store your mouse's x and y position,
+you can call them using mouseX and mouseY
+</p>
+
+<tiny-code style="height:210px">function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw(){
+  circle(mouseX,mouseY,100);
+  noLoop();
+}</tiny-code>
+
 <h3> Placing things in space</h3>
 
 <p>
