@@ -3,7 +3,7 @@ const fs = require('fs')
 // Recursively check blog folderss
 
 function getAllPosts(dirPath, arrayOfFiles) {
-  
+
     files = fs.readdirSync(dirPath)
     arrayOfFiles = arrayOfFiles || [];
 
@@ -13,7 +13,7 @@ function getAllPosts(dirPath, arrayOfFiles) {
         arrayOfFiles = getAllPosts(dirPath + "/" + file, arrayOfFiles)
       } else {
 
-        if(file.endsWith('.md')){
+        if(file.endsWith('.html') && !file.startsWith('_')){
             // const f = matter.read(__dirname + '/public/blog/' + file.slice(0, -3) + '/' + file);
             arrayOfFiles.push({filename : file, path : dirPath + "/" + file })
         }

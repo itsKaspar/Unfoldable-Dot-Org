@@ -35,7 +35,7 @@ class BlogMenu extends window.HTMLElement {
       // }
       // make a link end
 
-      newDiv.innerHTML = `<a href="blog.html?path=${item.path}"> ${item.filename.slice(0, -3)}</a>`;
+      newDiv.innerHTML = `<a href="blog.html?path=${item.path}"> ${item.filename.slice(0, -5)}</a>`;
 
       blogMenuDiv.appendChild(newDiv);
     })

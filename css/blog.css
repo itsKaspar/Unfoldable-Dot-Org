@@ -1,5 +1,9 @@
 /* BLOG POST */
 
+*{
+  color:black;
+}
+
 h1,h2,h3,h4,h5,h6{
     color:  #4d4d4d  ;
 }
@@ -21,18 +25,32 @@ a:hover{
   padding-top: calc(var(--p)*2);
   margin-left:auto;
   margin-right:auto;
-  width:90vh;                                              /*cant have this for phones */
+  width:800px;                                              /*cant have this for phones */
   line-height: 1.1;
-  /* border:1px solid white; */
+  /* border:1px solid red; */
 }
 
-tiny-code{
+#blog *{
+    /* border:1px solid green; */
+}
+
+#blog tiny-code{
   /* background-color:red; */
-  width:120%;
+  /* width:100%; */
   display:block;
-  margin-left:-10%;
+
+  margin-left:auto;
+  margin-right:auto;
+  padding:0;
+  /* width:100%; */
+  width: calc(100% - (var(--p) * 2));
+  /* margin-left:-10%; */
   /* border:1px solid white; */
-  height:500px;
+  height:30vh;
+  /* border:2px solid red; */
+  margin-top:var(--p);
+  margin-bottom:var(--p);
+  /* border:5px solid orange; */
 }
 
 #blog-head{
@@ -57,21 +75,27 @@ tiny-code{
 
 #blog-body{
   width:100%;
-  border-left:1px dashed  #979797 ;
+  border-left:1px dashed #979797 ;
   padding: var(--p);
 }
 
-#blog p, #blog h2, #blog h3, #blog h4, #blog h5, #blog h6, #blog iframe{
+#blog p, #blog h2, #blog h3, #blog h4, #blog h5, #blog h6, #blog iframe, #blog ul{
+  padding-top: var(--p);
   padding-left: var(--p);
   padding-right: var(--p);
   padding-bottom: var(--p);
+  /* width:calc(100% - (2 * var(--p))); */
 }
 
 #blog iframe{
-  margin-left:var(--p);
+  /* margin-left:var(--p); */
+  margin-left:auto;
+  margin-right:auto;
   padding:0;
-  width: calc(100% - (var(--p) * 2));
+
   /* min-height:50vh; */
+  width:100%;
+  /* border:5px solid red; */
   height:100%;
 }
 
@@ -113,16 +137,24 @@ tiny-code{
 /* # Tables */
 
 #blog table{
-  /* border: 1px solid white; */
-  margin-bottom: var(--p);
+
   /* width:calc(100% - ( var(--p) * 2)); */
-  margin-left:auto;
-  margin-right:auto;
+
   font-size:0.9em;
+  text-align:center;
+  /* border:3px solid red; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:var(--p);
+  margin-bottom:var(--p)
+}
+
+#blog tr{
 }
 
 #blog table thead{
-
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #blog table thead tr{
@@ -137,7 +169,7 @@ tiny-code{
 }
 
 #blog table tbody{
-  border-top: 1px solid #ffffff22;
+  border-top: 1px solid #00000022;
 }
 
 #blog table tbody tr{
@@ -145,8 +177,7 @@ tiny-code{
 }
 
 #blog table  tbody tr:nth-child(even){
-
-  background-color: #ffffff22;
+  background-color: #00000022;
 }
 
 #blog table tbody tr td{

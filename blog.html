@@ -10,12 +10,12 @@
 
   <!-- highlighting -->
   <link rel="stylesheet" href="./css/code.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script> -->
 
   <!-- libraries -->
   <script src="./lib/p5.min.js"></script>
   <script src="./lib/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
 
   <script src="https://itskaspar.github.io/Tiny-Code/tinycode.js"></script>
 </head>
@@ -80,10 +80,10 @@ $(document).scroll(function() {
 
     // Update DOM elements
     blogFilename.innerHTML = filename;
-    blogTitle.innerHTML = filename.slice(0, -3);
-    blogBody.innerHTML = marked.parse(text);
-
-    hljs.highlightAll(); // can also use the add function to hilight code blocks instead in the marked options ?
+    blogTitle.innerHTML = filename.slice(0, -5);
+    blogBody.innerHTML = text;
+    // 
+    // hljs.highlightAll(); // can also use the add function to hilight code blocks instead in the marked options ?
   }
 
   </script>
