@@ -158,11 +158,20 @@ main{
 	left: 0px;
 }
 
-.home-button {
-  font-size:4em;
-  display: none;
-  position: fixed;
-  top: 0;
-  left:calc( (100vw / 2) - ( var(--b) / 1) - (var(--p) * 3));
-  z-index: 1;
+.home-button, .home-button-link{
+  display:block;
+  position:fixed;
+  top:calc( var(--p) * 2 );
+  left:calc( var(--p) * 2 );
+  width:100px;
+  height:100px;
+  opacity:0.7;
+}
+
+.home-button:hover{
+  opacity:1;
+}
+
+.home-button-link{
+  z-index:10;
 }

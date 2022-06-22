@@ -14,43 +14,33 @@
 
   <!-- libraries -->
   <script src="./lib/p5.min.js"></script>
-  <script src="./lib/jquery-3.6.0.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
 
-  <script src="https://itskaspar.github.io/Tiny-Code/tinycode.js"></script>
+  <script src="./lib/tinycode.js"></script>
 </head>
 
 <body>
 
-<!-- <script src=./js/p5background.js></script> -->
-<script>
-$(document).scroll(function() {
-  var y = $(this).scrollTop();
-  if (y > 100) {
-    $('.home-button').fadeIn();
-  } else {
-    $('.home-button').fadeOut();
-  }
-});
 
-</script>
 
-<div class="home-button"><a href="#" id="homeLinkBig">⌂</a></div>
+  <a href="#" class="home-button-link">
+  </a>
+  <iframe class="home-button" src="./iframes/idx-gradient.html">
+  </iframe>
+
 
   <div id="blog">
     <div id="blog-head">
-      <div id="nav"><a href="#" id="homeLinkSmall">⌂ root</a> > <span id="blog-filename"></span></div>
-      <h1 id="blog-title"></h1>
+      <!-- <div id="nav"><a href="#" id="homeLinkSmall">⌂ root</a> > </div> -->
+      <h1 id="blog-title"><span id="blog-filename"></span></h1>
     </div>
     <div id="blog-body"></div>
 
 <script>
 
   // set link to home
-  let home1 = document.getElementById('homeLinkSmall')
-  let home2 = document.getElementById('homeLinkBig')
-  home1.href = window.location.href.split('blog.html')[0];// + '/website';
-  home2.href = window.location.href.split('blog.html')[0];// + '/website';
+  let home = document.getElementsByClassName('home-button-link')[0]
+  home.href = window.location.href.split('blog.html')[0];// + '/website';
 
   // Get the GET Variable in javascript
   const queryString = window.location.search;
@@ -82,8 +72,6 @@ $(document).scroll(function() {
     blogFilename.innerHTML = filename;
     blogTitle.innerHTML = filename.slice(0, -5);
     blogBody.innerHTML = text;
-    // 
-    // hljs.highlightAll(); // can also use the add function to hilight code blocks instead in the marked options ?
   }
 
   </script>

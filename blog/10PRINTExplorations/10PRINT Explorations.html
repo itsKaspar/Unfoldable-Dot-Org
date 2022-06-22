@@ -1,0 +1,23 @@
+<tiny-code layout="bot" style="height:900px;">let x =0;
+  let y=0;
+  function setup(){
+    createCanvas(windowWidth, windowHeight);
+    strokeWeight(2);
+  }
+  function draw(){
+    let probability=map(y,0,height,0,1);
+    if(random()>probability){
+      stroke(33,158,188);
+      line(x+0,y+0,x+10,y+10);
+    }
+    else{
+      stroke(255,185,3);
+      line(x+10,y+0,x+0,y+10);
+    }
+    x=x+10;
+    if(x>=width){
+      x=0;
+      y=y+10;
+    }
+    if(y>=height){noLoop();}
+}</tiny-code>

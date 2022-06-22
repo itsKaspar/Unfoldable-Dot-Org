@@ -1,14 +1,14 @@
 <h3>Drawing Shapes</h3>
 
-<p>To draw shapes inside a sketch, you can can call shape functions such as circle(), rect() and triangle().</p>
+<p>To draw shapes inside a sketch, you can can call shape functions such as circle(), rect() and triangle() and line()</p>
 
 <tiny-code style="height:210px">function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 
 function draw(){
-  let x = 0;
-  let y = 0;
+  let x = 100;
+  let y = 100;
   let diameter = 100;
   circle(x,y,diameter);
   noLoop();
@@ -23,7 +23,7 @@ to center shapes even if you decide to resize your sketch in the future</p>
 }
 
 function draw(){
-  circle(width*0.5,height*0.5,100);
+  circle(width/2,height/2,100);
   noLoop();
 }</tiny-code>
 
@@ -36,32 +36,34 @@ you can call them using mouseX and mouseY
 }
 
 function draw(){
+  background('white');
   circle(mouseX,mouseY,100);
 }</tiny-code>
 
-<h3> Placing things in space</h3>
+<h3> Placing shapes in sketch proportions</h3>
 
-<p>
-We've learned to place things in space by defining x and y variables
-</p>
+<p>We've seen how we could place a shape in the center by dividing width and height by 2, to place a shape at 25% or at 75% of the sketch
+  we can apply the same principle</P>
 
-<tiny-code style="height:210px">function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
+  <tiny-code style="height:210px">function setup() {
+    createCanvas(windowWidth, windowHeight);
+    rectMode(CENTER);
+  }
 
-function draw(){
-  let x = width/2;
-  let y = height/2;
-  let diameter = 100;
-  circle(x,y,diameter);
-  noLoop();
-}</tiny-code>
+  function draw(){
+    circle(width*0.25,height*0.5,100);
+    rect(width*0.75,height*0.5,100,100);
+    noLoop();
+  }</tiny-code>
 
-<p>But when handling hundreds of items it will become pretty tedious to have two separate variables for each of our placed shapes.
-To solve this we need a type of variable that can contain both the x and the y coordinate.</p>
+
 
 
 <h3>Vectors</h3>
+
+<p>
+We've learned to place things in space by defining x and y variables, but when handling hundreds of items it will become pretty tedious to have two separate variables for each of our placed shapes.
+To solve this we need a type of variable that can contain both the x and the y coordinate.</p>
 
 <p>For this reason I'd like to introduce vector notation. Though vectors mean different things in maths, physics and computer science,
 in creative coding, a vector refers to a specific data structure which we call objects, more specifically a vector is an object which holds two values :
@@ -74,7 +76,7 @@ one x-coordinate and one y-coordinate.</p>
 <table>
   <thead>
   <tr>
-    <th>attributes of v</th><th>values</th>
+    <th>attribute of v</th><th>value</th>
   </tr>
   </thead>
   <tbody>
@@ -94,14 +96,13 @@ one x-coordinate and one y-coordinate.</p>
 }
 
 function draw(){
-  let v = createVector(width / 2, height / 2);
-  // creates a random vector with
-  // x = width / 2
-  // y = height / 2
+  let v = createVector(width/2, height/2);
+  // creates a vector with
+  // v.x = width / 2
+  // v.y = height / 2
 
   let diameter = 100;
-
-  circle(v.x,v.y,diameter);
+  circle(v.x, v.y, diameter);
   noLoop();
 }</tiny-code>
 
