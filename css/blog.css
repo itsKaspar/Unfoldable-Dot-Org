@@ -13,7 +13,7 @@ p{
 }
 
 a{
-  color:  #af99cf   ;
+  color: #af99cf   ;
 }
 
 a:hover{
@@ -27,11 +27,11 @@ a:hover{
   margin-right:auto;
   width:800px;                                              /*cant have this for phones */
   line-height: 1.1;
-  /* border:1px solid red; */
+  border:1px solid red;
 }
 
 #blog *{
-    /* border:1px solid green; */
+    border:1px solid green;
 }
 
 tiny-code{
@@ -65,18 +65,9 @@ tiny-code{
   /* border:1px solid white; */
 }
 
-#blog #nav{
-  padding-left: var(--p);
-  margin-bottom: var(--p);
-  color:  #af99cf  ;
-  /* border:1px solid white; */
-}
-
 #blog h1{
   margin:0;
   padding:0;
-  padding-left: var(--p);
-  /* border:1px solid white; */
 }
 
 #blog-body{
@@ -85,13 +76,13 @@ tiny-code{
   padding: var(--p);
 }
 
-/* #blog p, #blog h2, #blog h3, #blog h4, #blog h5, #blog h6, #blog iframe, #blog ul{
-  padding-top: var(--p);
+#blog p, #blog h2, #blog h3, #blog h4, #blog h5, #blog h6, #blog iframe, #blog ul{
+  /* padding-top: var(--p);
   padding-left: var(--p);
   padding-right: var(--p);
-  padding-bottom: var(--p);
-
-} */
+  padding-bottom: var(--p); */
+  margin-bottom: calc(var(--p)/2);
+}
 
 #blog iframe{
   /* margin-left:var(--p); */
