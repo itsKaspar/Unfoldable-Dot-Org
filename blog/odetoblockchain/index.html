@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Signal Ethics - Blog</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+
+  <!-- <link rel="stylesheet" href="../../css/highlight.min.css"> -->
+  <link rel="stylesheet" href="./solarized-light.css">
+
+  <script src="../../lib/highlight.min.js"></script>
+
+  <script src="../../lib/p5.min.js"></script>
+  <script src="../../lib/netitor.min.js"></script>
+  <script src="../../components/tinycode.js"></script>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
+  *{
+
+  --c1: #0F0D1A;
+  --c2: #242038;
+
+  --c3: #725AC1;
+  --c4: #8D86C9;
+  --c5: #CAC4CE;
+  --c6: #F7ECE1;
+  --c7: #FFFFFF; /* very light yellow for texts */
+  }
+  .poem, pre{
+    margin:0;padding:0;
+    line-height: 1.2em;
+  }
+  .poem{
+    font-family:"SourceCodePro";
+    font-weight:bold;
+    text-align:center;
+    background-color: var(--c1);
+
+    width:50vw;
+    height:100vh;
+    left:0;
+    font-size:0.85em;
+  }
+  .rightblock{
+    position:absolute;
+    background:black;
+    left:50vw;
+    height:100vh;
+    width:50vw;
+    color:white;
+    top:0;
+  }
+  .rightblock img{
+    /* 420 et 376 */
+    margin-top:calc(50vh - 188px);
+    margin-left:calc(25vw - 210px);
+  }
+  pre{
+    padding-top:10vh;
+        color: var(--c2);
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- <a href="../.." class="home-button-link"></a>
+  <iframe class="home-button" src="../../js/bg.html"></iframe> -->
+
+  <div class="poem">
+    <pre>
+___ <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span><span style="color:var(--c7);">Ode to a Chain of Blocks</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span>
+
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">the</span><span style="color:var(--c3);">;</span> <span style="color:var(--c4);">class</span> <span style="color:var(--c6);">Block</span> <span style="color:var(--c3);">{</span><span style="color:var(--c4);">constructor</span><span style="color:var(--c3);">(</span> <span style="color:var(--c5);">of</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">chain</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">world</span> <span style="color:var(--c3);">)</span><span style="color:var(--c3);">{</span>
+<span style="color:var(--c4);">this</span> <span style="color:var(--c3);">.</span> <span style="color:var(--c6);">next</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">chain</span> <span style="color:var(--c3);">;</span>  <span style="color:var(--c4);">let</span> <span style="color:var(--c5);">hands</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">shackle</span>  <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">free</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">blocks</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">be</span><span style="color:var(--c3);">;</span> <span style="color:var(--c4);">this</span> <span style="color:var(--c3);">.</span> <span style="color:var(--c6);">index</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">of</span><span style="color:var(--c3);">;</span> <span style="color:var(--c4);">this</span> <span style="color:var(--c3);">.</span> <span style="color:var(--c6);">data</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">world</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">tech</span><span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">promises</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span> <span style="color:var(--c4);">this</span><span style="color:var(--c3);">.</span><span style="color:var(--c6);">time</span><span style="color:var(--c3);">=</span> <span style="color:var(--c4);">new</span> <span style="color:var(--c4);">Date</span><span style="color:var(--c3);">(</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">.</span><span style="color:var(--c4);">getTime</span><span style="color:var(--c3);">(</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">them</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">encrypt</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c3);">;</span> <span style="color:var(--c4);">this</span> <span style="color:var(--c3);">.</span> <span style="color:var(--c6);">hash</span> <span style="color:var(--c3);">=</span>  <span style="color:var(--c4);">$</span> <span style="color:var(--c4);">(</span> <span style="color:var(--c5);">of</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">chain</span> <span style="color:var(--c3);">,</span>
+<span style="color:var(--c4);">this</span> <span style="color:var(--c3);">.</span> <span style="color:var(--c6);">time</span> <span style="color:var(--c3);">=</span>  <span style="color:var(--c4);">true</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">ties for a</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c3);">+</span>  <span style="color:var(--c4);">false</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">world</span> <span style="color:var(--c3);">)</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c3);">}</span><span style="color:var(--c3);">}</span><span style="color:var(--c4);">let</span> <span style="color:var(--c5);">fall</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c4);">new</span> <span style="color:var(--c6);">Block</span><span style="color:var(--c4);">(</span> 0<span style="color:var(--c3);">,</span> 0<span style="color:var(--c3);">,</span> ___ <span style="color:var(--c3);">=</span><span style="color:var(--c3);">"</span> <span style="color:var(--c7);">on one</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">,</span> <span style="color:var(--c5);">another</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">let</span>  <span style="color:var(--c5);">blocks</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">[</span>   <span style="color:var(--c5);">fall</span>   <span style="color:var(--c3);">]</span> <span style="color:var(--c3);">;</span>  <span style="color:var(--c4);">let</span> <span style="color:var(--c5);">falling</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">further</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">while</span> <span style="color:var(--c3);">(</span> <span style="color:var(--c5);">blocks</span> <span style="color:var(--c3);">==</span> <span style="color:var(--c5);">fall</span> <span style="color:var(--c3);">)</span>  <span style="color:var(--c3);">{</span>  <span style="color:var(--c4);">let</span> <span style="color:var(--c5);">us</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">wonder why</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c3);">;</span> <span style="color:var(--c3);">}</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">it</span>  <span style="color:var(--c3);">=</span>  <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">be asked what</span> <span style="color:var(--c3);">"</span>   <span style="color:var(--c3);">;</span>   <span style="color:var(--c4);">function</span>  <span style="color:var(--c4);">doesItHave</span><span style="color:var(--c3);">(</span>
+<span style="color:var(--c3);">_</span>
+<span style="color:var(--c3);">)</span>
+<span style="color:var(--c3);">{</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">them</span>  <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">explain</span> <span style="color:var(--c3);">:</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">by</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">building</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">art</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">blocks</span>
+<span style="color:var(--c3);">[</span> <span style="color:var(--c5);">blocks</span><span style="color:var(--c3);">.</span> <span style="color:var(--c4);">length</span> <span style="color:var(--c4);">-</span> 1 <span style="color:var(--c3);">]</span><span style="color:var(--c3);">,</span> <span style="color:var(--c5);">can</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">be</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">long</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">art</span><span style="color:var(--c3);">.</span><span style="color:var(--c6);">index</span> <span style="color:var(--c3);">+</span> 1<span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">aura</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c4);">new</span> <span style="color:var(--c6);">Block</span> <span style="color:var(--c4);">(</span><span style="color:var(--c5);">be</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">art</span><span style="color:var(--c3);">.</span><span style="color:var(--c6);">hash</span><span style="color:var(--c3);">,</span> _<span style="color:var(--c3);">,</span><span style="color:var(--c5);">be</span> <span style="color:var(--c3);">=</span><span style="color:var(--c3);">"</span> <span style="color:var(--c7);">capital</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">while</span><span style="color:var(--c3);">(</span>0<span style="color:var(--c3);">)</span><span style="color:var(--c3);">{</span><span style="color:var(--c3);">}</span><span style="color:var(--c5);">blocks</span><span style="color:var(--c3);">.</span><span style="color:var(--c4);">push</span><span style="color:var(--c4);">(</span> <span style="color:var(--c5);">aura</span> <span style="color:var(--c3);">)</span><span style="color:var(--c3);">;</span><span style="color:var(--c3);">}</span><span style="color:var(--c5);">makes</span><span style="color:var(--c3);">=</span><span style="color:var(--c4);">false</span><span style="color:var(--c3);">+</span><span style="color:var(--c3);">"</span> <span style="color:var(--c7);">fungible</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c5);">that</span><span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">is how it</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span> <span style="color:var(--c4);">function</span> <span style="color:var(--c4);">$</span><span style="color:var(--c4);">(</span><span style="color:var(--c5);">hope</span><span style="color:var(--c3);">=</span><span style="color:var(--c5);">that</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">is clear</span> <span style="color:var(--c3);">"</span>
+<span style="color:var(--c3);">,</span><span style="color:var(--c5);">a</span><span style="color:var(--c3);">=</span>_<span style="color:var(--c3);">,</span> <span style="color:var(--c5);">moment</span><span style="color:var(--c3);">,</span> <span style="color:var(--c5);">goes</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">{</span><span style="color:var(--c4);">let</span> <span style="color:var(--c5);">weft</span><span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">pass</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">,</span> <span style="color:var(--c5);">through</span> <span style="color:var(--c3);">,</span> <span style="color:var(--c5);">shed</span> <span style="color:var(--c3);">=</span>
+<span style="color:var(--c5);">single</span> = <span style="color:var(--c4);">false</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c5);">hope</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">thread</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c5);">goes</span><span style="color:var(--c3);">.</span> <span style="color:var(--c4);">toString</span> <span style="color:var(--c4);">(</span><span style="color:var(--c3);">)</span> <span style="color:var(--c3);">+</span>
+<span style="color:var(--c5);">a</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c5);">moment</span><span style="color:var(--c3);">;</span> <span style="color:var(--c5);">is</span><span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">weaved</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span> <span style="color:var(--c4);">while</span><span style="color:var(--c3);">(</span>0 <span style="color:var(--c3);"><span style="color:var(--c3);">&&</span></span><span style="color:var(--c3);">"</span> <span style="color:var(--c7);">fabric</span> <span style="color:var(--c3);">"</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">{</span><span style="color:var(--c4);">return</span>
+<span style="color:var(--c3);">0</span>
+<span style="color:var(--c3);">;</span>
+<span style="color:var(--c3);">}</span>
+<span style="color:var(--c5);">but</span><span style="color:var(--c3);">=</span><span style="color:var(--c3);">"</span><span style="color:var(--c5);">what</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span><span style="color:var(--c4);">if</span> <span style="color:var(--c4);">(</span><span style="color:var(--c5);">2</span>><span style="color:var(--c3);">"</span><span style="color:var(--c7);">thread</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);"><span style="color:var(--c3);">&&</span></span> <span style="color:var(--c3);">!</span><span style="color:var(--c5);">blocks</span><span style="color:var(--c3);">)</span> <span style="color:var(--c3);">{</span><span style="color:var(--c4);">return</span><span style="color:var(--c3);">"</span><span style="color:var(--c7);">together</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span><span style="color:var(--c3);">}</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">two</span><span style="color:var(--c3);">=</span>0<span style="color:var(--c3);">,</span><span style="color:var(--c5);">block</span><span style="color:var(--c3);">=</span><span style="color:var(--c5);">single</span><span style="color:var(--c3);">.</span><span style="color:var(--c4);">length</span><span style="color:var(--c3);">,</span> <span style="color:var(--c5);">compete</span> <span style="color:var(--c3);">=</span> 0<span style="color:var(--c3);">;</span><span style="color:var(--c4);">for</span><span style="color:var(--c4);">(</span><span style="color:var(--c5);">aura</span><span style="color:var(--c3);">=</span>0<span style="color:var(--c3);">;</span>0<span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">null</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">{</span><span style="color:var(--c3);">}</span><span style="color:var(--c3);">;</span><span style="color:var(--c4);">if</span><span style="color:var(--c4);">(</span><span style="color:var(--c5);">block</span><span style="color:var(--c3);">=></span>1<span style="color:var(--c3);"><span style="color:var(--c3);">&&</span></span><span style="color:var(--c3);">"</span><span style="color:var(--c7);">longer</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">)</span><span style="color:var(--c4);">while</span><span style="color:var(--c3);">(</span><span style="color:var(--c5);">compete</span>&lt<span style="color:var(--c3);">;</span><span style="color:var(--c5);">block</span><span style="color:var(--c3);">)</span><span style="color:var(--c5);">two</span> <span style="color:var(--c3);">=</span>
+<span style="color:var(--c4);">(</span><span style="color:var(--c4);">(</span><span style="color:var(--c5);">two</span> <span style="color:var(--c4);"><<</span> 5<span style="color:var(--c3);">)</span><span style="color:var(--c3);">+</span><span style="color:var(--c5);">aura</span> <span style="color:var(--c4);">-</span> <span style="color:var(--c5);">two</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c5);">single</span><span style="color:var(--c3);">.</span> <span style="color:var(--c4);">charAt</span><span style="color:var(--c4);">(</span><span style="color:var(--c5);">compete</span><span style="color:var(--c3);">+</span><span style="color:var(--c3);">+</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">)</span> | 0<span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">return</span> <span style="color:var(--c5);">two</span><span style="color:var(--c3);">;</span><span style="color:var(--c5);">one</span><span style="color:var(--c3);">=</span> <span style="color:var(--c4);">undefined</span><span style="color:var(--c3);">;</span><span style="color:var(--c4);">let</span> <span style="color:var(--c5);">another</span><span style="color:var(--c3);">,</span><span style="color:var(--c5);">one</span><span style="color:var(--c3);">=</span><span style="color:var(--c3);">"</span><span style="color:var(--c7);">incomplete</span><span style="color:var(--c3);">"</span> <span style="color:var(--c3);">}</span>
+<span style="color:var(--c4);">while</span><span style="color:var(--c3);">(</span><span style="color:var(--c5);">blocks</span><span style="color:var(--c3);">.</span><span style="color:var(--c4);">length</span>&lt<span style="color:var(--c3);">;</span>50<span style="color:var(--c3);"><span style="color:var(--c3);">||</span></span> <span style="color:var(--c3);">"</span><span style="color:var(--c7);">keep falling</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">{</span><span style="color:var(--c4);">let</span> <span style="color:var(--c5);">me</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span><span style="color:var(--c7);">ask</span><span style="color:var(--c3);">"</span>
+<span style="color:var(--c3);">;</span> <span style="color:var(--c4);">let</span> <span style="color:var(--c5);">doesItNeed</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span><span style="color:var(--c7);">not</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span> <span style="color:var(--c4);">doesItHave</span><span style="color:var(--c3);">(</span><span style="color:var(--c3);">"</span><span style="color:var(--c7);">another block ?</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">;</span>
+<span style="color:var(--c4);">let</span> <span style="color:var(--c5);">torn</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c5);">fabric</span> <span style="color:var(--c3);">=</span> <span style="color:var(--c3);">"</span><span style="color:var(--c7);">in</span><span style="color:var(--c3);">"</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c4);">true</span> <span style="color:var(--c3);">+</span> <span style="color:var(--c3);">"</span> <span style="color:var(--c7);">need of</span><span style="color:var(--c3);">"</span> <span style="color:var(--c3);">;</span> <span style="color:var(--c4);">console</span> <span style="color:var(--c3);">.</span>
+<span style="color:var(--c6);">log</span><span style="color:var(--c4);">(</span><span style="color:var(--c5);">blocks</span><span style="color:var(--c3);">[</span><span style="color:var(--c5);">blocks</span><span style="color:var(--c3);">.</span><span style="color:var(--c4);">length</span> <span style="color:var(--c4);">-</span> 1<span style="color:var(--c3);">]</span><span style="color:var(--c3);">)</span><span style="color:var(--c3);">;</span><span style="color:var(--c5);">a</span><span style="color:var(--c3);">=</span><span style="color:var(--c3);">"</span><span style="color:var(--c7);">never ending scroll</span><span style="color:var(--c3);">"</span><span style="color:var(--c3);">;</span><span style="color:var(--c3);">}</span>
+</pre>
+</div>
+
+<div class="rightblock">
+  <img src="codepoem.gif" />
+</div>
+
+</body>
+</html>

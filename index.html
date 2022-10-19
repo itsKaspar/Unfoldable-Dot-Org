@@ -12,12 +12,12 @@
 
   <!-- javascript libraries -->
   <script src="./lib/p5.min.js"></script>
-  <script src="./lib/jquery-3.6.0.min.js"></script>
+  <script src="./lib/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
 
-  <script src=js/p5gradient.js></script> <!-- background sketch -->
+  <script src=js/bg.js></script> <!-- background sketch -->
 
   <div id="home">
 
@@ -26,51 +26,34 @@
       <h1>Signal Ethics</h1>
 
       <p>
-        Signal Ethics est un recueil de publications de recherches artistiques.<br><br>
+        Signal Ethics is an independant publication repository of critical new media art studies.
+        Taking the form of a blog compiling articles, bits of code and net art, it serves as a
+        permanent net-residency logbook for the work and research of Kaspar Ravel.<br><br>
 
-        Prenant la forme d'un blog polymorphe et intéractif compilant : articles, extraits de codes, entretiens et travaux réalisés,..
-        Sa fonction est celle de journal de bord lors de résidences d'art. <br><br>
+        Under the cover of documenting their artistic practice, this website aims to offer techno-critical POVs
+        towards new media by questioning the thought school of rationality && the neoliberal logics that dominate
+        our networked spaces today.<br><br>
 
-        Sous couvert d'être un témoin de recherche, la vocation seconde du projet est de proposer des points
-        de vues techno-critiques envers les nouveaux médias en remettant en question le paradigme de la rationalité
-        && les logiques néolibérales qui dominent aujourd'hui l'internet.<br><br>
-
-        Les différentes démarches présentées ici montrent souvent des approches DIY et poélitique pour atteindre
-        une forme de littératie numérique alternative, qui, ne seront jamais parfaites, mais tentent tout les jours d'être plus
-        accessible, inclusive, eco-responsable, et conscient des différents biais sociaux.
-
+        The different DIY approaches presented here in the form of hypertext and code are to be seen as poelitic templates
+        to access new and alternative forms of digital litteracy. <br><br>
       </p>
 
     </section>
 
     <section>
 
-      <!-- <h2>Publications</h2> -->
-
       <h2></h2>
-
-
-      <script src="./components/blog-menu.js"></script>
-      <!-- <script src="https://itskaspar.github.io/Tiny-Code/tinycode.js"></script> -->
 
       <blog-menu></blog-menu>
 
-      <script>
-      main();
+      <div class="blog-menu">
+        <ul class="blog-list-elements">
+          <li><a href="blog/odetoblockchain/index.html">ode to a chain of blocks</a></li>
+          <!-- <li><a href="blog/template/template.html">template</a></li>
+          <li><a href="blog/nonbinarycode/index.html">non-binary code</a></li> -->
+        </ul>
+      </div>
 
-      console.log(window.location.origin + '' + window.location.pathname);
-
-      async function main(){
-
-        let response = await fetch(window.location.origin + '' + window.location.pathname + '/paths.json');
-        let a = await response.json();
-        let b = JSON.stringify(a)
-        let blogMenuDiv = document.querySelector('blog-menu')
-
-        blogMenuDiv.setAttribute('items', b);
-      }
-
-      </script>
     </section>
 
 </div>

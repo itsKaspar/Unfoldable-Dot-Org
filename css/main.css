@@ -12,7 +12,7 @@
   --black3 : rgba(0,0,0,0.4);
   --black4 : rgba(0,0,0,0.2);
 
-  --b : 45vh;
+  --b : 49vh;
 }
 
 @font-face {
@@ -64,13 +64,16 @@ strong{
 #home{
   display: grid;
   grid-template-columns: var(--b) var(--b);
-  grid-template-rows: var(--b) var(--b);
+  /* grid-template-rows: var(--b) var(--b); */
   grid-gap: calc(var(--p) * 0);
   padding: calc(var(--p) * 1);
 
   padding-top: calc((100vh - (2 * var(--b)))/2);
   padding-left: calc((100vw - (2 * var(--b)))/2);
 
+
+  /* border:1px solid red; */
+  height:100vh;
 }
 
 #home section{
@@ -78,7 +81,8 @@ strong{
 	/* border: 1px dashed var(--c3); */
 	padding: calc(var(--p) * 2);
 	/* vertical-align: middle; */
-
+  height:50vh;
+  margin-top:20vh;
 }
 
 /* #home section:hover{
@@ -87,11 +91,6 @@ strong{
 
 
 
-#home section iframe{
-  padding:0;
-  width:100%;
-  height:100%;
-}
 
 #p5background{
 	position: absolute;
@@ -144,7 +143,7 @@ a{
 }
 
 #home section ul li a:before{
-	content: "»"
+	content: "» "
 }
 
 #home code{
@@ -165,7 +164,7 @@ main{
   left:calc( var(--p) * 2 );
   width:100px;
   height:100px;
-  opacity:0.7;
+  opacity:0.85;
 }
 
 .home-button:hover{

@@ -27,11 +27,11 @@ a:hover{
   margin-right:auto;
   width:800px;                                              /*cant have this for phones */
   line-height: 1.1;
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 #blog *{
-    border:1px solid green;
+    /* border:1px solid green; */
 }
 
 tiny-code{
