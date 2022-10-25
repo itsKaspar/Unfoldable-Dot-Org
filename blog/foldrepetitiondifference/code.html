@@ -1,0 +1,141 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <script src="../../lib/p5.min.js"></script>
+</head>
+<body>
+<script>
+function aequalsv(v1,v2){
+  if( ( Math.abs(v1.x - v2.x) < 0.1 ) && ( Math.abs(v1.y - v2.y) < 0.1 ) ){
+    return true;
+  }
+  return false;
+}
+
+class Fold{
+  constructor(origin=createVector(0,0), length = 6, folds=5){
+
+    this.length = length;
+    this.folds = folds;
+    this.foldCount = 0;
+    this.points = [origin];
+    this.angleSubdivs = 8;
+    this.angleUnit = TWO_PI / this.angleSubdivs;
+
+    // build the folds
+
+    while(this.foldCount < this.folds){
+
+      let lastPoint = this.points[this.points.length - 1];
+
+      let r = int(random(-this.angleSubdivs, this.angleSubdivs)) *this.angleUnit; // get direction for new point
+      let p = p5.Vector.fromAngle(r).setMag(this.length);
+      let newPoint = p5.Vector.add(lastPoint,p);
+
+      // check if line exists
+      if(this.checkIfLineExists(newPoint)){
+
+      }
+      else{
+        this.points.push(newPoint);
+        this.foldCount++;
+      }
+
+    }
+    this.center(); // center all squiggles
+
+
+  }
+
+  checkIfLineExists(v){
+    let p = this.points[this.points.length-1]; // get last point
+
+    for(let i = 1; i < this.points.length; i++){
+      if( ( aequalsv(v,this.points[i-1]) && aequalsv(p,this.points[i-0]) ) ||
+          ( aequalsv(v,this.points[i-0]) && aequalsv(p,this.points[i-1]) )
+       ){
+        return true;
+      }
+    }
+    return false;
+  }
+
+  draw(){
+    for(let i = 0; i < this.points.length - 1; i++){
+      line(this.points[i].x, this.points[i].y, this.points[i+1].x, this.points[i+1].y);
+    }
+  }
+
+  center(){
+    // calculate barycenter
+    let c = createVector(0,0);
+    for(let i = 0; i < this.points.length; i++){
+      c.add(this.points[i]);
+    }
+    c.div(this.points.length);
+    let diff = p5.Vector.sub(this.points[0],c);
+
+    //move all points
+    for(let i = 0; i < this.points.length; i++){
+      this.points[i].add(diff);
+    }
+  }
+}
+
+
+function setup() {
+  createCanvas(500, 500);
+  frameRate(0.8);
+}
+
+function draw(){
+    angleMode(DEGREES);
+  rectMode(CENTER);
+
+  noStroke();
+  linearGradient(
+    width/2-50, 0, //Start point
+    width/2+50, height, //End point
+    color('#A6D1E6'), //Start color
+    color('#645CAA'), //End color
+
+  );
+    rect(width/2, height/2, width, height);
+  stroke(255)
+  strokeWeight(2);
+
+  let folds = []
+  let xlength = 10;
+  let ylength = 10;
+  let padding = width / (xlength + 1);
+
+  let x = padding;
+
+  for(let i = 0; i < xlength; i++){
+
+let y = padding;
+
+    for(let j = 0; j < ylength ; j++){
+
+
+      let o = createVector(x, y);
+      let fold = new Fold(o);
+      fold.draw();
+
+      y += padding
+    }
+
+    x += padding
+  }
+}
+
+  function linearGradient(sX, sY, eX, eY, colorS, colorE){
+  let gradient = drawingContext.createLinearGradient(
+    sX, sY, eX, eY
+  );
+  gradient.addColorStop(0, colorS);
+  gradient.addColorStop(1, colorE);
+  drawingContext.fillStyle = gradient;
+  }
+</script>
+</body>
