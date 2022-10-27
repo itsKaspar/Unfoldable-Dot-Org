@@ -12,21 +12,44 @@
 
   <!-- javascript libraries -->
   <script src="./lib/p5.min.js"></script>
-  <script src="./lib/jquery-3.6.1.min.js"></script>
+  <script src="./components/window.js"></script>
+
+  <style>
+    #bloglist{
+
+      position:absolute;
+      width:400px;
+      height:400px;
+      left:calc(50vw);
+      top:calc(50vh - 300px);
+      padding:20px;
+    }
+
+    #bloglist ul li{
+      margin-bottom: calc(var(--p)/4);
+    }
+
+    #bloglist ul li a:hover{
+    	border-bottom: 2px solid white;
+    }
+
+    #bloglist ul li a:before{
+    	content: "» "
+    }
+
+  </style>
+
 </head>
 
 <body>
 
   <script src=js/bg.js></script> <!-- background sketch -->
 
-  <div id="home">
+<mica-dow content="
 
-    <section>
+        <h1>Signal Ethics</h1>
 
-      <h1>Signal Ethics</h1>
-
-      <p>
-        Signal Ethics is an independant publication repository of critical new media art studies.
+        <p>Signal Ethics is an independant publication repository of critical new media art studies.
         Taking the form of a blog compiling articles, bits of code and net art, it serves as a
         permanent net-residency logbook for the work and research of Kaspar Ravel.<br><br>
 
@@ -35,16 +58,21 @@
         our networked spaces today.<br><br>
 
         The different DIY approaches presented here in the form of hypertext and code are to be seen as poelitic templates
-        to access new and alternative forms of digital litteracy. <br><br>
-      </p>
+        to access new and alternative forms of digital litteracy. <br><br></p>"
 
-    </section>
+        width="400px"
+        x="calc(50vw - 400px)"
+        y="calc(50vh - 300px)"
 
-    <section>
+        >
 
-      <h2></h2>
+</mica-dow>
 
-      <blog-menu></blog-menu>
+
+      <a href="pages/lexicon/lexicon.html">Affective Lexicon Ocean</a>
+
+    <div id="bloglist">
+
 
       <div class="blog-menu">
         <ul class="blog-list-elements">
@@ -55,9 +83,11 @@
         </ul>
       </div>
 
-    </section>
 
-</div>
+
+    </div>
+
+
 
 </body>
 </html>

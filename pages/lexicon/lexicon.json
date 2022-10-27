@@ -1,0 +1,18 @@
+[
+	{
+		"word": "endogène",
+		"definition": "qui prend naissance à l'intérieur, est dû à une cause interne.",
+		"examples": "Organes endogènes venant de cellules situées dans les profondeurs des tissus. Roche endogène dont la matière vient des profondeurs de l'écorce terrestre.",
+    "translation": ["endogenous","endógeno","endogen"]
+	},
+  {
+    "word": "exogène",
+    "definition": "1. (didactique) qui provient de l'extérieur, se produit à l'extérieur (de l'organisme, d'un système) 2. (géologie) Qui affecte la partie superficielle de l'écorce terrestre.",
+    "translation": ["exogenous","exógeno","exogen"]
+  },
+  {
+    "word": "monade",
+    "definition": "chez le philosophe Leibniz, substance indivisible qui constitue l'élément dernier des choses.",
+    "translation": ["monad","monada","monade"]
+  }
+]
