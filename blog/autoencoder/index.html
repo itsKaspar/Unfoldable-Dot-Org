@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Signal Ethics - Blog</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+    <script src="../../components/navigation.js"></script>
+      <script src="../../components/window.js"></script>
+
+  <style>
+    body{
+      background:#eee;
+    }
+    iframe{
+      width:631px;
+      height:631px;
+      overflow:hidden;
+      margin-left:calc(50vw - 315px);
+      margin-top:calc(50vh - 315px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav-block color="black"></nav-block>
+
+  <mica-dow content="
+
+          <p>The first line is a completely trained auto-encoder<br><br>
+
+          The second line is the decoder only, hacked so that you can directly input the latent space data by hand using the sliders<br><br>
+
+          The 3rd line is a representation of the encoder, of the 9 labeled numbers that go in, and how they are projected inside the latent space
+          You can see groups of color on the output, these represent the fact that most 1´s live together in the latent space <br><br></p>"
+
+          width="400px"
+          height="400px"
+          x="calc(50vw - 400px)"
+          y="calc(50vh - 200px)"
+
+          >
+
+  </mica-dow>
+
+<iframe src="code.html" />
+
+</body>
+</html>

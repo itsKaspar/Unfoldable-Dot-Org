@@ -21,12 +21,14 @@
       width:400px;
       height:400px;
       left:calc(50vw);
-      top:calc(50vh - 300px);
+      top:calc(50vh - 200px);
       padding:20px;
     }
 
     #bloglist ul li{
       margin-bottom: calc(var(--p)/4);
+      font-family:"SourceCodePro";
+      font-size:0.8em;
     }
 
     #bloglist ul li a:hover{
@@ -35,6 +37,24 @@
 
     #bloglist ul li a:before{
     	content: "» "
+    }
+
+    hr {
+    border: 1px dashed white;
+    }
+
+    h5{
+      font-weight:bold;
+    }
+
+    #otherpages{
+      position:absolute;
+      border:1px solid white;
+      width:400px;
+      height:400px;
+      left:calc(50vw - 400px);
+      top:calc(50vh - 200px);
+      padding:20px;
     }
 
   </style>
@@ -61,29 +81,37 @@
         to access new and alternative forms of digital litteracy. <br><br></p>"
 
         width="400px"
+        height="400px"
         x="calc(50vw - 400px)"
-        y="calc(50vh - 300px)"
+        y="calc(50vh - 200px)"
 
         >
 
 </mica-dow>
 
-
+    <div id="otherpages">
+      Other things can be found on this website, which are both free-form and free-thought,
+      organized this way purposefully to match with my mind map. Such as the
       <a href="pages/lexicon/lexicon.html">Affective Lexicon Ocean</a>
+      which documents the words I have learnt during my research, other personnal things
+      and also a tiny manifesto about web space organizing
+    </div>
+
+
 
     <div id="bloglist">
-
-
-      <div class="blog-menu">
-        <ul class="blog-list-elements">
-          <li><a href="blog/odetoblockchain/index.html">ode to a chain of blocks</a></li>
-          <li><a href="blog/foldrepetitiondifference/index.html">fold, repetition and difference</a></li>
+        <!-- <h4>Whatever unfolds</h4> -->
+        <!-- <h5>▙ ▞ ▘▗ 	▘	▚ ▛ ▟ ▗	▜▗ 	▘ ▞	▙ ▚  ▖ ▟ ▘	▜▗  ▞▝</h5><br> -->
+        <br>
+        <!-- <hr> -->
+        <ul>
+          <li><a href="blog/autoencoder/index.html">2022.11.02 - Autoencoder Explorations</a></li>
+          <li><a href="blog/foldrepetitiondifference/index.html">2022.10.25 - Fold, Repetition and Difference</a></li>
+          <li><a href="blog/odetoblockchain/index.html">2022.10.12 - Ode to a Chain of Blocks</a></li>
           <!-- <li><a href="blog/template/template.html">template</a></li>
           <li><a href="blog/nonbinarycode/index.html">non-binary code</a></li> -->
+
         </ul>
-      </div>
-
-
 
     </div>
 

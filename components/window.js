@@ -13,7 +13,7 @@ class MicaDOM extends window.HTMLElement {
         position: absolute;
         z-index: 9;
         background-color: #fff;
-        border: 1px solid ${this.color || "#aaa"};
+        border: 1px solid ${this.color || "#ddd"};
         text-align: center;
         color:black;
         width:${this.width || "400px"};
@@ -27,7 +27,7 @@ class MicaDOM extends window.HTMLElement {
         padding: 6px;
         cursor: move;
         z-index: 10;
-        background-color: ${this.color || "#aaa"};
+        background-color: ${this.color || "#ddd"};
         color: #fff;
         text-align:right;
         font-size:0.8em;
@@ -37,6 +37,8 @@ class MicaDOM extends window.HTMLElement {
         display:inline-block;
         opacity:0.5;
         width:10px;
+        font-weight:bold;
+        color:#666
       }
 
       #wincross:hover{
