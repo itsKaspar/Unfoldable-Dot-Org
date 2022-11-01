@@ -15,8 +15,8 @@ let ten = [];
 
 function preload(){
 
-  test_images = loadJSON('/mnist/json/10k-mnist.json');
-  test_labels = loadJSON('/mnist/json/10k-labels-mnist.json');
+  test_images = loadJSON('./mnist/json/10k-mnist.json');
+  test_labels = loadJSON('./mnist/json/10k-labels-mnist.json');
 
   latentSpace = loadJSON('latentSpace.json');
 
