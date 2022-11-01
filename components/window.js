@@ -1,4 +1,4 @@
-class MicaDOM extends window.HTMLElement {
+class WinDOM extends window.HTMLElement {
   connectedCallback () {
     this.update()
     this.dragElement(document.getElementById("win"));
@@ -6,16 +6,18 @@ class MicaDOM extends window.HTMLElement {
   }
 
   update () {
+
+    this.crossSize = 25;
+
     this.innerHTML = `
 
       <style>
       #win {
+        color:#666;
         position: absolute;
         z-index: 9;
-        background-color: #fff;
-        border: 1px solid ${this.color || "#ddd"};
-        text-align: center;
-        color:black;
+        border:1px solid white;
+        background-color:white;
         width:${this.width || "400px"};
         height:${this.height || "auto"};
         left:${this.x || "calc(50vw - 200px)"};
@@ -24,27 +26,46 @@ class MicaDOM extends window.HTMLElement {
       }
 
       #winheader {
-        padding: 6px;
+        color:black;
+        padding:0;
         cursor: move;
         z-index: 10;
-        background-color: ${this.color || "#fff"};
-        border-bottom:1px dashed #ccc;
-        color: #fff;
-        text-align:right;
-        font-size:0.8em;
+        background-color: ${this.color || "white"};
+        border-bottom:1px dotted #ccc;
+        display:flex;
+        height:calc(${this.crossSize}px + 1px);
       }
+
+      #winheaderleft {
+        padding:5px;
+        padding-left:10px;
+        font-size:0.9em;
+        text-align:left;
+        width:calc( ${this.width || "400px"} - ${this.crossSize}px);
+        opacity:0.2;
+      }
+      #winheaderleft:hover {
+        opacity:0.4;
+      }
+
+      #winheaderright{
+        padding:5px;
+        width:${this.crossSize}px;
+        opacity:0.2;
+      }
+      #winheaderright:hover{
+        opacity:0.4;
+      }
+
 
       #wincross{
         display:inline-block;
-        opacity:0.5;
-        width:10px;
+        width:100%;
         font-weight:bold;
-        color:#666
+        color:black;
       }
 
-      #wincross:hover{
-        opacity:0.8;
-      }
+
 
       #win #wincontent{
         text-align:left;
@@ -52,9 +73,6 @@ class MicaDOM extends window.HTMLElement {
         margin-top:6px;
       }
 
-      #wincontent *{
-        color:#555;
-      }
 
       h1{
         font-family:"SourceCodePro";
@@ -65,7 +83,15 @@ class MicaDOM extends window.HTMLElement {
       <!-- Draggable DIV -->
      <div id="win">
        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-       <div id="winheader"><a href="#" id="wincross">&#10005;</a></div>
+       <div id="winheader">
+        <div id="winheaderleft">
+          <span style="font-size:0.7em;">∠</span>
+           ${this.title || "unfoldable.org"}
+        </div>
+        <div id="winheaderright">
+          <a href="#" id="wincross">&#10005;</a>
+        </div>
+       </div>
        <div id="wincontent">${this.content}</div>
      </div>
     `
@@ -142,7 +168,7 @@ class MicaDOM extends window.HTMLElement {
 
   // declare any attributes you want to listen for changes to
   static get observedAttributes () {
-    return ['color', 'content', 'width', 'height', 'x', 'y']
+    return ['color', 'content', 'width', 'height', 'x', 'y', 'title']
   }
 
   attributeChangedCallback (attrName, oldVal, newVal) { // runs everytime any att is changed
@@ -155,6 +181,7 @@ class MicaDOM extends window.HTMLElement {
     if (attrName === 'height') this.update()
     if (attrName === 'x') this.update()
     if (attrName === 'y') this.update()
+    if (attrName === 'title') this.update()
   }
 }
-window.customElements.define('mica-dow', MicaDOM)
+window.customElements.define('win-dow', WinDOM)

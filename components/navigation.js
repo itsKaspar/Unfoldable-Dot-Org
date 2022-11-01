@@ -10,25 +10,40 @@ class NavDOM extends window.HTMLElement {
           position:absolute;
           top:25px;
           left:25px;
-          z-index:10000;
-          width:50px;
-          height:50px;
-          border:1px solid ${this.color};
-          opacity:0.5;
+          width:70px;
+          height:70px;
+          border:2px dashed ${this.color};
         }
         .nav-block:hover{
-          opacity:0.9;
+          border:1px solid ${this.color};
         }
         .nav-block a{
+          position:absolute;
+          display:inline-block;
+          top:0px;
+          left:0px;
           width:100%;
           height:100%;
+          z-index:1000;
+        }
+        .nav-block:hover .nav-gradient{
           display:block;
-          background:${this.color};
-          opacity:0.1;
+        }
+        .nav-gradient{
+          display:none;
+          position:absolute;
+          width:100%;
+          height:100%;
+          top:0;
+          left:0px;
         }
       </style>
+
+
       <div class="nav-block">
+        <iframe class="nav-gradient" width="70px" height="70px" src="${window.location.origin}/pages/gradient/gradient.html"></iframe>
         <a href="${window.location.origin}"></a>
+
       </div>
     `
   }

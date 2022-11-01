@@ -4,7 +4,7 @@
 <head>
   <!-- meta -->
   <meta charset="utf-8">
-  <title>Signal Ethics</title>
+  <title>unfoldable.org</title>
 
   <!-- cascading stylesheets -->
   <link rel="stylesheet" href="./css/reset.css">
@@ -16,62 +16,42 @@
 
   <style>
 
-    #bigtitle{
-      color:white;
-      font-size:2.5em;
-      width:500px;
-      position:absolute;
-      left:620px;
-      top:200px;
-      font-weight:bold;
-            font-family:"SourceCodePro";
-        /* font-family: "Abington"; */
-        opacity:0.8;
-    }
-
-    #bloglist{
-
+    #box{
       position:absolute;
       width:400px;
       height:400px;
-      left:calc(50vw);
-      top:calc(50vh - 200px);
-      padding:20px;
       border:1px solid white;
-      margin-left:20px;
+      padding:20px;
+      color:white;
     }
 
-    #bloglist ul li{
+    .blog{
+      left:calc(50vw - 150px);
+      top:calc(50vh - 250px);
+    }
+
+    .other{
+      left:20px;
+      top:20px;
+    }
+
+    .blog ul li{
       margin-bottom: calc(var(--p)/4);
       font-family:"SourceCodePro";
       font-size:0.8em;
+      opacity:0.8;
     }
 
-    #bloglist ul li a:hover{
-    	border-bottom: 2px solid white;
+    .blog ul li a:hover{
+      opacity:1;
+      text-decoration: underline;
     }
 
-    #bloglist ul li a:before{
+    .blog ul li a:before{
     	content: "» "
     }
 
-    hr {
-    border: 1px dashed white;
-    }
 
-    h5{
-      font-weight:bold;
-    }
-
-    #otherpages{
-      position:absolute;
-      border:1px solid white;
-      width:400px;
-      height:400px;
-      left:calc(50vw - 400px);
-      top:calc(50vh - 200px);
-      padding:20px;
-    }
 
   </style>
 
@@ -79,14 +59,15 @@
 
 <body>
 
-<div id="bigtitle">unfoldable.org</div>
+<script src=js/bg.js></script> <!-- background sketch -->
 
-  <script src=js/bg.js></script> <!-- background sketch -->
+<win-dow content="
+        <p>unfoldable dot org is a net art project compiling short studies
+        and techno-illogical ideas in the form of code poetry, blog articles and
+        tiny simulations.<br><br>
 
-<mica-dow content="
-        <p>Signal Ethics is an independant publication repository of critical new media art studies.
-        Taking the form of a blog compiling articles, bits of code and net art, it serves as a
-        permanent net-residency logbook for the work and research of Kaspar Ravel.<br><br>
+        It serves in its content as a permanent residency logbook for the work and artistic research of Kaspar Ravel,
+        and as a whole it is a proposition to new ways of <em>doing</em> on the web 3.0 <br><br>
 
         Under the cover of documenting their artistic practice, this website aims to offer techno-critical POVs
         towards new media by questioning the thought school of rationality && the neoliberal logics that dominate
@@ -97,24 +78,20 @@
 
         width="400px"
         height="400px"
-        x="calc(50vw - 400px)"
-        y="calc(50vh - 200px)"
+        x="calc(50vw - 250px)"
+        y="calc(50vh - 150px)"
 
         >
 
-</mica-dow>
+</win-dow>
 
-    <div id="otherpages">
-      Other things can be found on this website, which are both free-form and free-thought,
-      organized this way purposefully to match with my mind map. Such as the
-      <a href="pages/lexicon/lexicon.html">Affective Lexicon Ocean</a>
-      which documents the words I have learnt during my research, other personnal things
-      and also a tiny manifesto about web space organizing
+    <div id="box" class="other">
+      <a href="pages/lexicon/lexicon.html">Unfoldable Lexicon</a>
     </div>
 
 
 
-    <div id="bloglist">
+    <div id="box" class="blog">
         <!-- <h4>Whatever unfolds</h4> -->
         <!-- <h5>▙ ▞ ▘▗ 	▘	▚ ▛ ▟ ▗	▜▗ 	▘ ▞	▙ ▚  ▖ ▟ ▘	▜▗  ▞▝</h5><br> -->
         <br>

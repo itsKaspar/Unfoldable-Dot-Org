@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "server": "python3 -m http.server",
-    "build": "node scripts/genPaths.js"
+    "server": "python3 -m http.server"
   },
   "author": "",
   "license": "ISC"

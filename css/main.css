@@ -1,20 +1,3 @@
-
-:root {
-  --p: 20px; /* global padding */
-
-  --c0 : rgba(255,255,255,1);
-  --c1 : rgba(255,255,255,0.8);
-  --c2 : rgba(255,255,255,0.6);
-  --c3 : rgba(255,255,255,0.4);
-
-  --black1 : rgba(0,0,0,1);
-  --black2 : rgba(0,0,0,0.8);
-  --black3 : rgba(0,0,0,0.4);
-  --black4 : rgba(0,0,0,0.2);
-
-  --b : 49vh;
-}
-
 @font-face {
   font-family: "NunitoSans-Light";
   src: url("../fonts/NunitoSans-Light.ttf") format("truetype");
@@ -32,9 +15,6 @@
   font-family: "SourceCodePro";
   src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
 }
-/*
-  font-family: "SourceCodePro";
-  src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype"); */
 
   /* font-family: "Qaligo";
   src: url("../fonts/Qaligo Regular.ttf") format("truetype"),
@@ -47,61 +27,18 @@ body{
 
 	width: 100vw;
 	height: 100%;
-	color: var(--c1);
   padding:0;
   overflow-x:hidden;
-
 
   font-family: 'NunitoSans-Light';
 }
 
-strong{
-  font-family: 'NunitoSans-Regular';
+a{
+  color:white;
 }
-
-/* MAIN GRID */
-
-#home{
-  display: grid;
-  grid-template-columns: var(--b) var(--b);
-  /* grid-template-rows: var(--b) var(--b); */
-  grid-gap: calc(var(--p) * 0);
-  padding: calc(var(--p) * 1);
-
-  padding-top: calc((100vh - (2 * var(--b)))/2);
-  padding-left: calc((100vw - (2 * var(--b)))/2);
-
-
-  /* border:1px solid red; */
-  height:100vh;
+a:hover{
+  text-decoration:none;
 }
-
-#home section{
-
-	/* border: 1px dashed var(--c3); */
-	padding: calc(var(--p) * 2);
-	/* vertical-align: middle; */
-  height:50vh;
-  margin-top:20vh;
-}
-
-/* #home section:hover{
-	border: 3px dashed var(--c2);
-} */
-
-
-
-
-#p5background{
-	position: absolute;
-	top :0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
-
-/* Generic Styles */
 
 h1{
   font-family: 'Abington', sans-serif;
@@ -123,40 +60,7 @@ h3{
   color: var(--c0);
 }
 
-
 p{
 	text-align: justify;
   text-justify: inter-letter;
-}
-
-
-a{
-	color: white;
-}
-
-
-
-main{
-	z-index: -1;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-}
-
-.home-button, .home-button-link{
-  display:block;
-  position:fixed;
-  top:calc( var(--p) * 2 );
-  left:calc( var(--p) * 2 );
-  width:100px;
-  height:100px;
-  opacity:0.85;
-}
-
-.home-button:hover{
-  opacity:1;
-}
-
-.home-button-link{
-  z-index:10;
 }
