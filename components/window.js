@@ -27,7 +27,8 @@ class MicaDOM extends window.HTMLElement {
         padding: 6px;
         cursor: move;
         z-index: 10;
-        background-color: ${this.color || "#ddd"};
+        background-color: ${this.color || "#fff"};
+        border-bottom:1px dashed #ccc;
         color: #fff;
         text-align:right;
         font-size:0.8em;
@@ -53,6 +54,11 @@ class MicaDOM extends window.HTMLElement {
 
       #wincontent *{
         color:#555;
+      }
+
+      h1{
+        font-family:"SourceCodePro";
+        font-size:1.3em;
       }
       </style>
 

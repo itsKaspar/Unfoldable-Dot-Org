@@ -13,7 +13,7 @@ class NavDOM extends window.HTMLElement {
           z-index:10000;
           width:50px;
           height:50px;
-          border:3px dashed ${this.color};
+          border:1px solid ${this.color};
           opacity:0.5;
         }
         .nav-block:hover{
