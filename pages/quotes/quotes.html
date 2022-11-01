@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lexicon</title>
+    <script src="../../components/navigation.js"></script>
+  <style>
+
+  @font-face {
+    font-family: "Qaligo";
+    src: url("../../fonts/Qaligo Regular.ttf") format("truetype");
+  }
+
+    h1{
+      width:20vw;
+      position:absolute;
+      left:calc(50vw - 10vw);
+      text-align:center;
+      font-family: "Qaligo";
+      font-size:1.5em;
+      top:5vh;
+    }
+    table{
+      color:#555;
+      background:#ddd;
+      font-size:0.8em;
+      border-collapse: collapse;
+      width:30vw;
+      position:absolute;
+      left:calc(50vw - 15vw);
+      top:20vh;
+    }
+    td{
+            border:1px solid white;
+            padding:10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav-block color="black"></nav-block>
+  <h1>Unfoldable Lexicon</h1>
+  <lexicon></lexicon>
+
+
+  <script>
+  main();
+
+  async function main(){
+
+    let response = await fetch('lexicon.json');
+    let json = await response.json();
+    let lexicon = document.querySelector('lexicon')
+
+    let table = document.createElement('table');
+
+    for(let i = 0; i < json.length; i++){
+      const tr = document.createElement('tr'); // create new div
+      tr.innerHTML = `<tr><td>${json[i].word}</td><td>${json[i].definition}</td></tr>`;
+      table.appendChild(tr);
+    }
+
+    lexicon.appendChild(table);
+
+  }
+  </script>
+
+
+</body>
+</html>

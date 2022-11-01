@@ -1,0 +1,28 @@
+[
+	{
+		"word": "endogène",
+		"definition": "qui prend naissance à l'intérieur, est dû à une cause interne.",
+		"examples": "Organes endogènes venant de cellules situées dans les profondeurs des tissus. Roche endogène dont la matière vient des profondeurs de l'écorce terrestre.",
+    "translation": ["endogenous","endógeno","endogen"]
+	},
+  {
+    "word": "exogène",
+    "definition": "1. (didactique) qui provient de l'extérieur, se produit à l'extérieur (de l'organisme, d'un système) 2. (géologie) Qui affecte la partie superficielle de l'écorce terrestre.",
+    "translation": ["exogenous","exógeno","exogen"]
+  },
+  {
+    "word": "monade",
+    "definition": "chez le philosophe Leibniz, substance indivisible qui constitue l'élément dernier des choses.",
+    "translation": ["monad","monada","monade"]
+  },
+	{
+		"word": "inflexion",
+		"definition": "1. Action de plier légèrement, d'incliner le corps ou la tête. 2. (Littéraire) Courbe, déviation d'une route, d'un cours d'eau, etc. 3. Changement dans une orientation philosophique, morale, etc. 4. Modulation, changement d'accent ou d'intonation, dans la voix. 5. (Phonétique) Type d'assimilation caractérisé par la modification de timbre que subit une voyelle sous l'influence d'une voyelle voisine. 6. (Mathématiques) Point d'inflexion, point régulier d'une courbe plane où celle-ci traverse sa tangente. [Pour une courbe, représentation graphique de la fonction numérique f(x), un point d'inflexion correspond à un changement de signe de f''(x)",
+		"translation": ["inflection","inflexión","flexion"]
+	},
+	{
+		"word": "contigu",
+		"definition": "1. Qui touche à quelque chose, à un lieu ; qui en est voisin. 2. Qui est rapproché de quelque chose d'autre par le sens ou le temps",
+		"translation": ["contiguous","contiguo","zusammenhängend"]
+	}
+]
