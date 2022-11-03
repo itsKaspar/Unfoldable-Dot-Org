@@ -85,11 +85,11 @@ class Fold{
 
 function setup() {
   createCanvas(500, 500);
-  frameRate(0.8);
+
 }
 
 function draw(){
-    angleMode(DEGREES);
+  angleMode(DEGREES);
   rectMode(CENTER);
 
   noStroke();
@@ -127,6 +127,7 @@ let y = padding;
 
     x += padding
   }
+    frameRate(1);
 }
 
   function linearGradient(sX, sY, eX, eY, colorS, colorE){

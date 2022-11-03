@@ -65,19 +65,16 @@ class WinDOM extends window.HTMLElement {
         color:black;
       }
 
-
+      h1{
+        padding-bottom:8px;
+      }
 
       #win #wincontent{
         text-align:left;
         padding:15px;
-        margin-top:6px;
+        margin-top:0px;
       }
 
-
-      h1{
-        font-family:"SourceCodePro";
-        font-size:1.3em;
-      }
       </style>
 
       <!-- Draggable DIV -->

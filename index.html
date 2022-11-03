@@ -35,6 +35,11 @@
       color:white;
     }
 
+
+    a{
+      color:white;
+    }
+
     .blog{
       left:calc(50vw - 150px);
       top:calc(50vh - 250px);
@@ -46,20 +51,29 @@
     }
 
     .blog ul li{
-      margin-bottom: calc(var(--p)/4);
       font-family:"SourceCodePro";
       font-size:0.8em;
       opacity:0.8;
     }
 
     .blog ul li a:hover{
-      opacity:1;
-      text-decoration: underline;
+      color:black;
+      opacity:0.8;
     }
+
 
     .blog ul li a:before{
     	content: "» "
     }
+
+    .winlink{
+      color:#4169E1;
+    }
+    .winlink:hover{
+      color:#4169E1;
+      text-decoration: underline;
+    }
+
 
 
 
@@ -71,20 +85,24 @@
 
 <script src=js/bg.js></script> <!-- background sketch -->
 
-<win-dow content="
-        <p>unfoldable dot org is a net art project compiling short studies
-        and techno-illogical ideas in the form of code poetry, blog articles and
-        tiny simulations.<br><br>
+<win-dow content='
+        <h1>unfoldable.org</h1>
 
-        It serves in its content as a residency logbook for the work and artistic research of Kaspar Ravel,
-        and secondly as a whole, it is a proposition to new ways of <em>doing</em> on the web 3.0 <br><br>
+        <p>
+        [...] is a net art project by <a href="https://www.kaspar.wtf" class="winlink">Kaspar Ravel</a>
+        that compiles techno-illogical short studies in the form
+        of code poems, blog posts && tiny simulations.<br><br>
 
-        Under the cover of documenting their artistic practice, this website aims to offer techno-critical POVs
+        It serves both as a residency logbook for their artistic research
+        and secondly as a proposition to other ways of <em>doing</em> on the web 3.0<br><br>
+
+        Under the cover of an art+tech documentation, this website aims to offer techno-critical POVs
         towards new media by questioning the thought school of rationality && the neoliberal logics that dominate
         our networked spaces today.<br><br>
 
-        The different DIY approaches presented here in the form of hypertext and code are to be seen as poelitic templates
-        to access new and alternative forms of digital litteracy. <br><br></p>"
+        The different DIY approaches presented here in hypertext and code should be seen as playful tactics &&
+        <acronym title="poetic || politic">pœlitic</acronym> templates
+        to access alternative forms of digital litteracy. <br><br></p>'
 
         width="400px"
         height="400px"

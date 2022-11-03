@@ -16,33 +16,22 @@
   src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
 }
 
-  /* font-family: "Qaligo";
-  src: url("../fonts/Qaligo Regular.ttf") format("truetype"),
-       url("../fonts/Qaligo Regular.otf") format("opentype"); */
+@font-face {
+  font-family: "Qaligo";
+  src: url("../fonts/Qaligo Regular.ttf") format("truetype");
+}
 
 
 
 body{
 	font-size: 16px;
-
-	width: 100vw;
-	height: 100%;
-  padding:0;
-  overflow-x:hidden;
-
   font-family: 'NunitoSans-Light';
 }
 
-a{
-  color:white;
-}
-a:hover{
-  text-decoration:none;
-}
-
 h1{
+  padding-top:2px;
   font-family: 'Abington', sans-serif;
-	font-size: 2.6em;
+	font-size: 2.5em;
 	color: var(--c0);
   margin-bottom: var(--p);
 }
@@ -63,4 +52,13 @@ h3{
 p{
 	text-align: justify;
   text-justify: inter-letter;
+}
+
+a{
+  color:white;
+}
+
+acronym{
+  text-decoration:underline;
+  text-decoration-style: dotted;
 }
