@@ -75,6 +75,10 @@ class WinDOM extends window.HTMLElement {
         margin-top:0px;
       }
 
+      #wincontent p{
+        margin-bottom:10px;
+      }
+
       </style>
 
       <!-- Draggable DIV -->

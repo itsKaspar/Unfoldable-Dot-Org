@@ -30,23 +30,34 @@
 
   <nav-block color="black"></nav-block>
 
-  <mica-dow content="
+  <win-dow content="
 
-          <p>The first line is a completely trained auto-encoder<br><br>
+  <p>
+  This autoencoder takes an image of a hand-written digit and squeezes it into fewer dimensions,
+  a latent space, composed of trained parameters from which any of the handwritten digits are theoretically
+  reproducable back to their higher dimensional representation. The first line you can see here is the AE in action with its input and output.
+  </p>
 
-          The second line is the decoder only, hacked so that you can directly input the latent space data by hand using the sliders<br><br>
+  <p>
+  The second line is the decoder part of the AE. Giving you directly access to the parameters of the latent space.
+  By toying around with these you can decode your own shapes into higher dimensions with the same training set that the first line uses.
+  </p>
 
-          The 3rd line is a representation of the encoder, of the 9 labeled numbers that go in, and how they are projected inside the latent space
-          You can see groups of color on the output, these represent the fact that most 1´s live together in the latent space <br><br></p>"
+  <p>
+  The third line is the encoder part of the AE, with its inputs on one side, and on the other,
+  a 2D flattened representation of the latent space using the t-SNE algorithm. As such the color
+  patches that you can see correspond to the input colors of digits 1 through 9.
+  </p>
+"
 
           width="400px"
-          height="400px"
-          x="calc(50vw - 400px)"
-          y="calc(50vh - 200px)"
+          height="380px"
+          x="10vw"
+          y="20vh"
 
           >
 
-  </mica-dow>
+  </win-dow>
 
 <iframe class="code" src="code.html" />
 
