@@ -1,0 +1,66 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <script src="../../lib/p5.min.js"></script>
+</head>
+<body>
+<script>
+
+var graphics; // offscreen buffer
+var rot;//
+
+function preload() {
+  modelObj = loadModel('./model.obj', true);
+  // textureImg = loadImage('./model.jpg');
+}
+
+function setup() {
+  smooth();
+  createCanvas(window.innerWidth, window.innerHeight, WEBGL);
+  // graphics = createGraphics(512,512); // offscreen buffer
+}
+
+function draw() {
+  background(0);
+  // lights();
+
+  // directionalLight(173, 216, 230, 0.25, 0.25, 0);
+
+  noStroke();
+  orbitControl();
+
+  directionalLight(255, 127, 80, 0.75, 0, 0.25);
+    directionalLight(173, 216, 230, 0.25, 0.25, 0);
+
+	rotateZ(frameCount/1000);
+
+
+
+
+// # Fix Texture Mapping
+// graphics.push();
+// graphics.translate(512/2,512/2);
+// graphics.scale(1.0,-1.0);    // flip y-axis backwards
+// graphics.imageMode(CENTER);
+// graphics.image(textureImg,0,0);
+// graphics.pop();
+
+push();
+
+rotateX(PI/2);
+// rotateZ(-PI);
+// rotateY(-PI/2);
+// rotateX(PI/2);
+scale(3);
+  model(modelObj);
+
+pop();
+
+
+
+  // texture(graphics);
+
+}
+
+</script>
+</body>
